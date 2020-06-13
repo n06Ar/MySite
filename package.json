@@ -1,0 +1,27 @@
+{
+    "name": "MySite",
+    "version": "1.0.0",
+    "repository": "github.com:n06Ar/MySite.git",
+    "author": "NobuhitoArai <nobht.arai@gmail.com>",
+    "scripts": {
+        "format": "prettier --write **/*.{js,json,md,html}"
+    },
+    "prettier": {
+        "singleQuote": true,
+        "semi": false,
+        "tabWidth": 4,
+        "arrowParens": "avoid",
+        "svelteBracketNewLine": true,
+        "svelteStrictMode" : true
+    },
+    "devDependencies": {
+        "parcel": "^1.12.4",
+        "parcel-bundler": "^1.12.4",
+        "prettier": "^2.0.5",
+        "prettier-plugin-svelte": "^1.1.0",
+        "svelte": "^3.23.2"
+    },
+    "browserslist": [
+        "last 1 chrome versions"
+    ]
+}
