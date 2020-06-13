@@ -12,7 +12,7 @@
         "tabWidth": 4,
         "arrowParens": "avoid",
         "svelteBracketNewLine": true,
-        "svelteStrictMode" : true
+        "svelteStrictMode": true
     },
     "devDependencies": {
         "parcel": "^1.12.4",
