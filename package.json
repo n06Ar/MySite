@@ -4,6 +4,8 @@
     "repository": "github.com:n06Ar/MySite.git",
     "author": "NobuhitoArai <nobht.arai@gmail.com>",
     "scripts": {
+        "dev": "parcel serve src/index.html --open",
+        "build": "parcel build src/index.html -d docs",
         "format": "prettier --write **/*.{js,json,md,html}"
     },
     "prettier": {
@@ -19,7 +21,8 @@
         "parcel-bundler": "^1.12.4",
         "prettier": "^2.0.5",
         "prettier-plugin-svelte": "^1.1.0",
-        "svelte": "^3.23.2"
+        "svelte": "^3.23.2",
+        "typescript": "^3.9.5"
     },
     "browserslist": [
         "last 1 chrome versions"
