@@ -1,8 +1,9 @@
 {
-    "name": "MySite",
+    "name": "my-site",
     "version": "1.0.0",
     "repository": "github.com:n06Ar/MySite.git",
     "author": "NobuhitoArai <nobht.arai@gmail.com>",
+    "private": true,
     "scripts": {
         "dev": "parcel serve src/index.html --open",
         "build": "parcel build src/index.html -d docs",
@@ -16,14 +17,18 @@
         "svelteBracketNewLine": true,
         "svelteStrictMode": true
     },
-    "devDependencies": {
+    "dependencies": {
         "parcel": "^1.12.4",
+        "svelte": "^3.23.2",
+        "svelte-awesome": "^2.3.0",
+        "svelte-preprocess": "^3.9.7",
+        "svelte-spa-router": "^2.2.0"
+    },
+    "devDependencies": {
         "parcel-bundler": "^1.12.4",
         "parcel-plugin-svelte": "^4.0.6",
         "prettier": "^2.0.5",
         "prettier-plugin-svelte": "^1.1.0",
-        "svelte": "^3.23.2",
-        "svelte-preprocess": "^3.9.7",
         "typescript": "^3.9.5"
     },
     "browserslist": [
