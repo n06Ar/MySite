@@ -19,15 +19,15 @@
     },
     "dependencies": {
         "parcel": "^1.12.4",
-        "svelte": "^3.23.2",
-        "svelte-awesome": "^2.3.0",
-        "svelte-preprocess": "^3.9.7",
-        "svelte-spa-router": "^2.2.0"
+        "svelte": "^3.23.2"
     },
     "devDependencies": {
-        "node-sass": "^4.14.1",
+        "svelte-awesome": "^2.3.0",
+        "svelte-preprocess": "^3.9.7",
+        "svelte-spa-router": "^2.2.0",
         "parcel-bundler": "^1.12.4",
         "parcel-plugin-svelte": "^4.0.6",
+        "node-sass": "^4.14.1",
         "prettier": "^2.0.5",
         "prettier-plugin-svelte": "^1.1.0",
         "sass": "^1.26.9",
