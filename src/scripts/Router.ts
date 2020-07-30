@@ -1,4 +1,6 @@
+// @ts-ignore
 import Home from './components/pages/Home.svelte'
+// @ts-ignore
 import Profile from './components/pages/Profile.svelte'
 
 let routes = {}
