@@ -22,16 +22,18 @@
         "svelte": "^3.23.2"
     },
     "devDependencies": {
-        "svelte-awesome": "^2.3.0",
-        "svelte-preprocess": "^3.9.7",
-        "svelte-spa-router": "^2.2.0",
+        "@tsconfig/svelte": "^1.0.4",
+        "node-sass": "^4.14.1",
         "parcel-bundler": "^1.12.4",
         "parcel-plugin-svelte": "^4.0.6",
-        "node-sass": "^4.14.1",
         "prettier": "^2.0.5",
         "prettier-plugin-svelte": "^1.1.0",
         "sass": "^1.26.9",
-        "typescript": "^3.9.5"
+        "svelte-awesome": "^2.3.0",
+        "svelte-check": "^1.0.0",
+        "svelte-preprocess": "^4.0.9",
+        "svelte-spa-router": "^2.2.0",
+        "typescript": "^3.9.7"
     },
     "browserslist": [
         "last 1 chrome versions"
