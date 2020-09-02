@@ -1,7 +1,5 @@
 <script lang="ts">
     import { link } from 'svelte-spa-router'
-    import Icon from 'svelte-awesome'
-    import { home, addressCard, thumbsUp } from 'svelte-awesome/icons'
 </script>
 
 <style lang="scss">
@@ -52,22 +50,16 @@
                 <ul class="header__nav uk-navbar-nav">
                     <li>
                         <a href="/" use:link class="header-nav__link">
-                            <Icon data="{home}" />
+                            <span data-uk-icon="icon: home;"></span>
                             <span class="header-nav__letter-gap"></span> Home
                         </a>
                     </li>
                     <li>
                         <a href="/profile" use:link class="header-nav__link">
-                            <Icon data="{addressCard}" />
+                            <span data-uk-icon="icon: user;"></span>
                             <span class="header-nav__letter-gap"></span> Profile
                         </a>
                     </li>
-                    <!--                    <li>-->
-                    <!--                        <a href="/work" use:link class="header-nav__link">-->
-                    <!--                            <Icon data="{thumbsUp}" />-->
-                    <!--                            <span class="header-nav__letter-gap"></span> work-->
-                    <!--                        </a>-->
-                    <!--                    </li>-->
                 </ul>
             </div>
         </div>
