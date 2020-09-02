@@ -62,12 +62,12 @@
                             <span class="header-nav__letter-gap"></span> Profile
                         </a>
                     </li>
-                    <li>
-                        <a href="/work" use:link class="header-nav__link">
-                            <Icon data="{thumbsUp}" />
-                            <span class="header-nav__letter-gap"></span> work
-                        </a>
-                    </li>
+                    <!--                    <li>-->
+                    <!--                        <a href="/work" use:link class="header-nav__link">-->
+                    <!--                            <Icon data="{thumbsUp}" />-->
+                    <!--                            <span class="header-nav__letter-gap"></span> work-->
+                    <!--                        </a>-->
+                    <!--                    </li>-->
                 </ul>
             </div>
         </div>
