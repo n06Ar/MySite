@@ -12,12 +12,8 @@
     } from 'svelte-spa-router'
 </script>
 
-<style>
-
-</style>
-
 <Header />
 <main>
-    <Router {routes} />
+    <Router routes="{routes}" />
 </main>
 <Footer />
