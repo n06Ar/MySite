@@ -5,8 +5,8 @@
     "author": "NobuhitoArai <nobht.arai@gmail.com>",
     "private": true,
     "scripts": {
-        "dev": "parcel serve src/index.html --open",
-        "build": "parcel build src/index.html -d docs",
+        "dev": "parcel serve src/index.html",
+        "build": "rm -rf docs && parcel build src/index.html -d docs",
         "format": "prettier --write **/*.{js,json,md,html}"
     },
     "prettier": {
