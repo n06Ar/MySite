@@ -4,5 +4,7 @@
         "target": "es6",
         "baseUrl": "."
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*"],
+    "baseUrl": "./src/",
+    "paths": {"@/*":["*"]}
 }
