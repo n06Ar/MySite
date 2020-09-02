@@ -35,10 +35,6 @@
     .header-nav__letter-gap {
         margin-right: 0.5rem;
     }
-
-    .header__after {
-        margin-top: 68px;
-    }
 </style>
 
 <header
