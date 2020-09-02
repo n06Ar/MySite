@@ -42,15 +42,25 @@
     }
 
     .profile-body__content.-history {
-        display: hidden;
+        display: none;
         margin-top: 5rem;
         flex-basis: 100%;
     }
 
     .profile__icon {
-        width: 60%;
-        height: 50%;
+        width: 50%;
+        height: auto;
         border-radius: 50%;
+    }
+
+    .profile-content__list.-two-rows {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .profile-content-list__item {
+        flex-basis: 50%;
     }
 
     .profile-account__link {
@@ -67,7 +77,7 @@
 </style>
 
 <section class="profile">
-    <h2>Profile</h2>
+    <h2><span data-uk-icon="icon: user; ratio: 1.5"></span> Profile</h2>
 
     <section class="profile__body">
         <div class="profile-body__content -icon">
@@ -87,36 +97,36 @@
                 <dd>{getAge(1991, 4, 12)} years old</dd>
             </dl>
             <dl>
-                <dt>Programming Language</dt>
+                <dt>Programming Languages</dt>
                 <dd>
-                    <ul>
-                        <li>Java</li>
-                        <li>PHP</li>
-                        <li>Objective-C</li>
-                        <li>Swift</li>
-                        <li>Kotlin</li>
-                        <li>JavaScript</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
+                    <ul class="profile-content__list -two-rows">
+                        <li class="profile-content-list__item">Java</li>
+                        <li class="profile-content-list__item">PHP</li>
+                        <li class="profile-content-list__item">Objective-C</li>
+                        <li class="profile-content-list__item">Swift</li>
+                        <li class="profile-content-list__item">Kotlin</li>
+                        <li class="profile-content-list__item">JavaScript</li>
+                        <li class="profile-content-list__item">HTML</li>
+                        <li class="profile-content-list__item">CSS</li>
                     </ul>
                 </dd>
             </dl>
             <dl>
-                <dt>Framework</dt>
+                <dt>Frameworks</dt>
                 <dd>
-                    <ul>
-                        <li>Spring</li>
-                        <li>CakePHP</li>
-                        <li>Laravel</li>
-                        <li>Vue.js</li>
-                        <li>React</li>
-                        <li>Svelte</li>
-                        <li>Scss</li>
+                    <ul class="profile-content__list -two-rows">
+                        <li class="profile-content-list__item">Spring</li>
+                        <li class="profile-content-list__item">CakePHP</li>
+                        <li class="profile-content-list__item">Laravel</li>
+                        <li class="profile-content-list__item">Vue.js</li>
+                        <li class="profile-content-list__item">React</li>
+                        <li class="profile-content-list__item">Svelte</li>
+                        <li class="profile-content-list__item">Scss</li>
                     </ul>
                 </dd>
             </dl>
             <dl>
-                <dt>Account</dt>
+                <dt>Accounts</dt>
                 <dd>
                     <ul>
                         <li>
@@ -127,11 +137,25 @@
                                 <span
                                     class="profile-account__icon -twitter"
                                     data-uk-icon="twitter"
+                                    aria-label="Twitter"
                                 ></span> @N06AR</a>
                         </li>
                         <li>
-                            <a class="profile-account__link" href=""><span
+                            <a
+                                class="profile-account__link"
+                                href="https://github.com/n06Ar"
+                            ><span
                                     data-uk-icon="github"
+                                    aria-label="GitHub"
+                                ></span> @N06AR</a>
+                        </li>
+                        <li>
+                            <a
+                                class="profile-account__link"
+                                href="https://qiita.com/N06AR"
+                            ><span
+                                    data-uk-icon="file-text"
+                                    aria-label="Qiita"
                                 ></span> @N06AR</a>
                         </li>
                     </ul>
