@@ -19,7 +19,9 @@
     },
     "dependencies": {
         "parcel": "^1.12.4",
-        "svelte": "^3.23.2"
+        "svelte": "^3.6.7",
+        "svelte-router-spa": "^5.7.2",
+        "uikit": "^3.5.7"
     },
     "devDependencies": {
         "@tsconfig/svelte": "^1.0.4",
