@@ -6,7 +6,7 @@
     "private": true,
     "scripts": {
         "dev": "parcel serve src/index.html",
-        "build": "rm -rf docs && parcel build src/index.html -d docs",
+        "build": "rm -rf docs && parcel build src/index.html -d docs --public-url https://n06ar.github.io/MySite/",
         "format": "prettier --write **/*.{js,json,md,html}"
     },
     "prettier": {
