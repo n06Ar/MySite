@@ -32,4 +32,4 @@ var t,i=arguments[3];!function(i,e){"object"==typeof exports&&"undefined"!=typeo
 },{}],"abQy":[function(require,module,exports) {
 "use strict";var e=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(exports,"__esModule",{value:!0});const t=e(require("./components/App.svelte")),u=e(require("uikit")),i=e(require("uikit/dist/js/uikit-icons"));u.default.use(i.default);const r=new t.default({target:document.body});exports.default=r;
 },{"./components/App.svelte":"mGiN","uikit":"k5J2","uikit/dist/js/uikit-icons":"dwtN"}]},{},["abQy"], null)
-//# sourceMappingURL=https://n06ar.github.io/MySite/App.e53b7308.js.map
+//# sourceMappingURL=App.e53b7308.js.map
