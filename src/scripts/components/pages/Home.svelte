@@ -19,7 +19,9 @@
 </style>
 
 <section class="home">
-    <h2><span data-uk-icon="icon: home; ratio: 1.5"></span> Home</h2>
+    <h2>
+        <span data-uk-icon="icon: home; ratio: 1.5" aria-hidden="true"></span> Home
+    </h2>
     <artcle class="home__content">
         <h3>ここはなんですか？</h3>
         <p>

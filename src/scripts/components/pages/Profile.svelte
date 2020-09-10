@@ -77,7 +77,9 @@
 </style>
 
 <section class="profile">
-    <h2><span data-uk-icon="icon: user; ratio: 1.5"></span> Profile</h2>
+    <h2>
+        <span data-uk-icon="icon: user; ratio: 1.5" aria-hidden="true"></span> Profile
+    </h2>
 
     <section class="profile__body">
         <div class="profile-body__content -icon">
