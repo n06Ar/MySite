@@ -66,6 +66,23 @@
                             <span class="header-nav__letter-gap"></span> Profile
                         </a>
                     </li>
+                    <li>
+                        <a
+                            href="https://n06ar.hatenablog.com"
+                            class="header-nav__link"
+                        >
+                            <span
+                                data-uk-icon="icon: bookmark;"
+                                aria-hidden="true"
+                            ></span>
+                            <span class="header-nav__letter-gap"></span> Blog <span
+                                class="header-nav__letter-gap"
+                            ></span><span
+                                data-uk-icon="icon: push;"
+                                aria-hidden="true"
+                            ></span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
