@@ -170,6 +170,17 @@
                                     aria-label="Qiita"
                                 ></span> @N06AR</a>
                         </li>
+                        <li>
+                            <a
+                                class="profile-account__link"
+                                href="https://n06ar.hatenablog.com/"
+                            >
+                                <span
+                                    data-uk-icon="bookmark"
+                                    aria-label="Hatena Blog"
+                                ></span> @N06AR
+                            </a>
+                        </li>
                     </ul>
                 </dd>
             </dl>
