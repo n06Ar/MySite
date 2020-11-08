@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "svelte-spa-router": "./svelte-spa-router.js",
+    "svelte/internal": "./svelte/internal.js",
+    "uikit": "./uikit.js",
+    "uikit/dist/js/uikit-icons": "./uikit/dist/js/uikit-icons.js"
+  }
+}

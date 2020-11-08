@@ -1,0 +1,11 @@
+// [snowpack] add styles to the page (skip if no document exists)
+if (typeof document !== 'undefined') {
+  const code = ".header.svelte-bfr8vd{display:flex;width:80%;max-width:1440px;margin:auto}.header__title.svelte-bfr8vd{margin:auto 0}.header-title__text.svelte-bfr8vd{font-size:2rem;font-weight:bold;color:#333333;text-decoration:none}.header-title__text.svelte-bfr8vd:link{color:#333333}.header-nav__link.svelte-bfr8vd{font-size:1rem;text-decoration:none}.header-nav__letter-gap.svelte-bfr8vd{margin-right:0.5rem}";
+
+  const styleEl = document.createElement("style");
+  const codeEl = document.createTextNode(code);
+  styleEl.type = 'text/css';
+
+  styleEl.appendChild(codeEl);
+  document.head.appendChild(styleEl);
+}
