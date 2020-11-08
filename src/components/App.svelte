@@ -1,7 +1,7 @@
 <script lang="ts">
     import Header from './common/Header.svelte'
     import Footer from './common/Footer.svelte'
-    import routes from '../Router.ts'
+    import routes from '..//utility/Router.ts'
     import Router, {
         link,
         push,
@@ -12,7 +12,7 @@
     } from 'svelte-spa-router'
 </script>
 
-<style>
+<style lang="scss">
     .main {
         flex: 1;
     }

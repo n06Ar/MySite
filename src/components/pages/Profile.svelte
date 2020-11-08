@@ -72,7 +72,7 @@
     }
 
     .profile-account__icon.-twitter {
-        color: rgb(29, 161, 242);
+        color: #1da1f2;
     }
 </style>
 
