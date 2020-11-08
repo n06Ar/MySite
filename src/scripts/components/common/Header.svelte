@@ -50,19 +50,13 @@
                 <ul class="header__nav uk-navbar-nav">
                     <li>
                         <a href="/" use:link class="header-nav__link">
-                            <span
-                                data-uk-icon="icon: home;"
-                                aria-hidden="true"
-                            ></span>
+                            <span data-uk-icon="home" aria-hidden="true"></span>
                             <span class="header-nav__letter-gap"></span> Home
                         </a>
                     </li>
                     <li>
                         <a href="/profile" use:link class="header-nav__link">
-                            <span
-                                data-uk-icon="icon: user;"
-                                aria-hidden="true"
-                            ></span>
+                            <span data-uk-icon="user" aria-hidden="true"></span>
                             <span class="header-nav__letter-gap"></span> Profile
                         </a>
                     </li>
@@ -72,7 +66,7 @@
                             class="header-nav__link"
                         >
                             <span
-                                data-uk-icon="icon: bookmark;"
+                                data-uk-icon="bookmark"
                                 aria-hidden="true"
                             ></span>
                             <span class="header-nav__letter-gap"></span> Blog <span
