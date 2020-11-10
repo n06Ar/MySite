@@ -45,7 +45,7 @@
         </p>
         <ul>
             <li><a href="https://svelte.dev/">Svelte</a></li>
-            <li><a href="https://parceljs.org/">PARCEL</a></li>
+            <li><a href="https://www.snowpack.dev">Snowpack</a></li>
             <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
             <li><a href="https://sass-lang.com/">Sass</a></li>
             <li><a href="https://getuikit.com">UIkit</a></li>
