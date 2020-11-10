@@ -15,7 +15,7 @@ import {
 	space
 } from "../../../web_modules/svelte/internal.js";
 
-import { link } from "../../../web_modules/svelte-spa-router.js";
+import Router, { link } from "../../../web_modules/svelte-spa-router.js";
 
 function create_fragment(ctx) {
 	let header;

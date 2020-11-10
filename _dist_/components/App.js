@@ -20,15 +20,7 @@ import {
 import Header from "./common/Header.js";
 import Footer from "./common/Footer.js";
 import routes from "../utility/Router.js";
-
-import Router, {
-	link,
-	push,
-	pop,
-	replace,
-	location,
-	querystring
-} from "../../web_modules/svelte-spa-router.js";
+import Router from "../../web_modules/svelte-spa-router.js";
 
 function create_fragment(ctx) {
 	let header;

@@ -24,6 +24,9 @@ function subscribe(store, ...callbacks) {
     const unsub = store.subscribe(...callbacks);
     return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
 }
+function component_subscribe(component, store, callback) {
+    component.$$.on_destroy.push(subscribe(store, callback));
+}
 function action_destroyer(action_result) {
     return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
 }
@@ -46,6 +49,9 @@ function text(data) {
 function space() {
     return text(' ');
 }
+function empty() {
+    return text('');
+}
 function attr(node, attribute, value) {
     if (value == null)
         node.removeAttribute(attribute);
@@ -55,10 +61,43 @@ function attr(node, attribute, value) {
 function children(element) {
     return Array.from(element.childNodes);
 }
+function custom_event(type, detail) {
+    const e = document.createEvent('CustomEvent');
+    e.initCustomEvent(type, false, false, detail);
+    return e;
+}
 
 let current_component;
 function set_current_component(component) {
     current_component = component;
+}
+function get_current_component() {
+    if (!current_component)
+        throw new Error('Function called outside component initialization');
+    return current_component;
+}
+function createEventDispatcher() {
+    const component = get_current_component();
+    return (type, detail) => {
+        const callbacks = component.$$.callbacks[type];
+        if (callbacks) {
+            // TODO are there situations where events could be dispatched
+            // in a server (non-DOM) environment?
+            const event = custom_event(type, detail);
+            callbacks.slice().forEach(fn => {
+                fn.call(component, event);
+            });
+        }
+    };
+}
+// TODO figure out if we still want to support
+// shorthand events, or if we want to implement
+// a real bubbling mechanism
+function bubble(component, event) {
+    const callbacks = component.$$.callbacks[event.type];
+    if (callbacks) {
+        callbacks.slice().forEach(fn => fn(event));
+    }
 }
 
 const dirty_components = [];
@@ -130,6 +169,19 @@ function update($$) {
 }
 const outroing = new Set();
 let outros;
+function group_outros() {
+    outros = {
+        r: 0,
+        c: [],
+        p: outros // parent group
+    };
+}
+function check_outros() {
+    if (!outros.r) {
+        run_all(outros.c);
+    }
+    outros = outros.p;
+}
 function transition_in(block, local) {
     if (block && block.i) {
         outroing.delete(block);
@@ -274,4 +326,4 @@ class SvelteComponent {
     }
 }
 
-export { SvelteComponent as S, subscribe as a, attr as b, create_component as c, destroy_component as d, detach as e, element as f, init as g, insert as h, is_function as i, space as j, transition_in as k, transition_out as l, mount_component as m, noop as n, action_destroyer as o, append as p, run_all as r, safe_not_equal as s, tick as t };
+export { SvelteComponent as S, subscribe as a, init as b, insert as c, check_outros as d, empty as e, transition_in as f, group_outros as g, detach as h, is_function as i, component_subscribe as j, createEventDispatcher as k, tick as l, bubble as m, noop as n, create_component as o, mount_component as p, destroy_component as q, run_all as r, safe_not_equal as s, transition_out as t, attr as u, element as v, space as w, action_destroyer as x, append as y };
