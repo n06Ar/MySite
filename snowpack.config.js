@@ -17,6 +17,7 @@ module.exports = {
         out: 'docs',
     },
     alias: {
-        /* ... */
+        '@app': './src',
+        '@components': './src/components',
     },
 }

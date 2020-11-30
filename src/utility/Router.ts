@@ -1,5 +1,5 @@
-import Home from '../components/pages/Home.svelte'
-import Profile from '../components/pages/Profile.svelte'
+import Home from '@components/pages/Home.svelte'
+import Profile from '@components/pages/Profile.svelte'
 
 let routes = {}
 

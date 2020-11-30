@@ -1,4 +1,4 @@
-import App from './components/App.svelte'
+import App from '@components/App.svelte'
 import UIkit from 'uikit'
 import Icons from 'uikit/dist/js/uikit-icons'
 
