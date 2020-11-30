@@ -6,11 +6,12 @@
         "moduleResolution": "node",
         "jsx": "preserve",
         "baseUrl": "./",
-        /* paths - If you configure Snowpack import aliases, add them here. */
-        "paths": {},
-        /* noEmit - Snowpack builds (emits) files, not tsc. */
+        "paths": {
+            "*": ["*"],
+            "src/*": ["src/*"],
+            "public/*": ["public/*"]
+        },
         "noEmit": true,
-        /* Additional Options */
         "strict": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
