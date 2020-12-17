@@ -1,7 +1,7 @@
 import { c as createCommonjsModule, a as commonjsGlobal } from '../../../common/_commonjsHelpers-eb5a497e.js';
 
 var uikitIcons = createCommonjsModule(function (module, exports) {
-/*! UIkit 3.5.9 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
+/*! UIkit 3.5.17 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
 
 (function (global, factory) {
      module.exports = factory() ;

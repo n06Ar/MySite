@@ -1,4 +1,10 @@
 function noop() { }
+function assign(tar, src) {
+    // @ts-ignore
+    for (const k in src)
+        tar[k] = src[k];
+    return tar;
+}
 function run(fn) {
     return fn();
 }
@@ -23,9 +29,6 @@ function subscribe(store, ...callbacks) {
     }
     const unsub = store.subscribe(...callbacks);
     return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
-}
-function component_subscribe(component, store, callback) {
-    component.$$.on_destroy.push(subscribe(store, callback));
 }
 function action_destroyer(action_result) {
     return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
@@ -75,6 +78,9 @@ function get_current_component() {
     if (!current_component)
         throw new Error('Function called outside component initialization');
     return current_component;
+}
+function afterUpdate(fn) {
+    get_current_component().$$.after_update.push(fn);
 }
 function createEventDispatcher() {
     const component = get_current_component();
@@ -204,6 +210,43 @@ function transition_out(block, local, detach, callback) {
         block.o(local);
     }
 }
+
+function get_spread_update(levels, updates) {
+    const update = {};
+    const to_null_out = {};
+    const accounted_for = { $$scope: 1 };
+    let i = levels.length;
+    while (i--) {
+        const o = levels[i];
+        const n = updates[i];
+        if (n) {
+            for (const key in o) {
+                if (!(key in n))
+                    to_null_out[key] = 1;
+            }
+            for (const key in n) {
+                if (!accounted_for[key]) {
+                    update[key] = n[key];
+                    accounted_for[key] = 1;
+                }
+            }
+            levels[i] = n;
+        }
+        else {
+            for (const key in o) {
+                accounted_for[key] = 1;
+            }
+        }
+    }
+    for (const key in to_null_out) {
+        if (!(key in update))
+            update[key] = undefined;
+    }
+    return update;
+}
+function get_spread_object(spread_props) {
+    return typeof spread_props === 'object' && spread_props !== null ? spread_props : {};
+}
 function create_component(block) {
     block && block.c();
 }
@@ -303,6 +346,9 @@ function init(component, options, instance, create_fragment, not_equal, props, d
     }
     set_current_component(parent_component);
 }
+/**
+ * Base class for Svelte components. Used when dev=false.
+ */
 class SvelteComponent {
     $destroy() {
         destroy_component(this, 1);
@@ -326,4 +372,4 @@ class SvelteComponent {
     }
 }
 
-export { SvelteComponent as S, subscribe as a, init as b, insert as c, check_outros as d, empty as e, transition_in as f, group_outros as g, detach as h, is_function as i, component_subscribe as j, createEventDispatcher as k, tick as l, bubble as m, noop as n, create_component as o, mount_component as p, destroy_component as q, run_all as r, safe_not_equal as s, transition_out as t, attr as u, element as v, space as w, action_destroyer as x, append as y };
+export { action_destroyer as A, append as B, SvelteComponent as S, subscribe as a, init as b, insert as c, transition_out as d, empty as e, check_outros as f, group_outros as g, transition_in as h, is_function as i, detach as j, createEventDispatcher as k, afterUpdate as l, bubble as m, noop as n, create_component as o, mount_component as p, get_spread_update as q, run_all as r, safe_not_equal as s, tick as t, get_spread_object as u, destroy_component as v, assign as w, attr as x, element as y, space as z };
