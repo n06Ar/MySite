@@ -1,6 +1,6 @@
 # NaoNao
 
-![Node.js CI](https://github.com/n06Ar/MySite/workflows/Node.js%20CI/badge.svg?branch=master)
+![Deploy GithubPage](https://github.com/n06Ar/MySite/workflows/Deploy%20GithubPage/badge.svg)
 
 ## What is this?
 
