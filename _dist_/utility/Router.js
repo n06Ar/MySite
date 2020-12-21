@@ -1,11 +1,1 @@
-import Home2 from "../components/pages/Home.js";
-import Profile2 from "../components/pages/Profile.js";
-let routes = {};
-const urlParams = new URLSearchParams(window.location.search);
-if (!urlParams.has("routemap")) {
-  routes = {
-    "/": Home2,
-    "/profile": Profile2
-  };
-}
-export default routes;
+import e from"../components/pages/Home.js";import r from"../components/pages/Profile.js";let o={};const a=new URLSearchParams(window.location.search);a.has("routemap")||(o={"/":e,"/profile":r});export default o;

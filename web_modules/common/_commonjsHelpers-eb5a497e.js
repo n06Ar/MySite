@@ -1,17 +1,1 @@
-var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
-
-function createCommonjsModule(fn, basedir, module) {
-	return module = {
-		path: basedir,
-		exports: {},
-		require: function (path, base) {
-			return commonjsRequire(path, (base === undefined || base === null) ? module.path : base);
-		}
-	}, fn(module, module.exports), module.exports;
-}
-
-function commonjsRequire () {
-	throw new Error('Dynamic requires are not currently supported by @rollup/plugin-commonjs');
-}
-
-export { commonjsGlobal as a, createCommonjsModule as c };
+var i=typeof globalThis!="undefined"?globalThis:typeof window!="undefined"?window:typeof global!="undefined"?global:typeof self!="undefined"?self:{};function l(o,r,n){return n={path:r,exports:{},require:function(t,e){return u(t,e??n.path)}},o(n,n.exports),n.exports}function u(){throw new Error("Dynamic requires are not currently supported by @rollup/plugin-commonjs")}export{i as a,l as c};
