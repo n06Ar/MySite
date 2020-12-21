@@ -9,6 +9,13 @@ module.exports = {
         '@snowpack/plugin-dotenv',
         '@snowpack/plugin-typescript',
         '@snowpack/plugin-sass',
+        [
+            '@snowpack/plugin-optimize',
+            {
+                preloadModules: true,
+                preloadCSS: true,
+            },
+        ],
     ],
     install: [
         /* ... */
