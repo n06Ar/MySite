@@ -5,7 +5,8 @@
         "/_dist_/index.js"
       ],
       "css": [
-        "/_dist_/style.css"
+        "/_dist_/style.css",
+        "/favicon.jpeg"
       ],
       "js": [
         "/__snowpack__/env.js",
