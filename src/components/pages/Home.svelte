@@ -31,8 +31,7 @@
         <div>
             <a href="https://github.com/n06ar/mysite">
                 <img
-                    src="https://github-link-card.s3.ap-northeast-1.amazonaws.com/n06ar/mysite.png"
-                    width="460"
+                    src="https://github-readme-stats.vercel.app/api/pin/?username=n06Ar&repo=MySite&show_owner=true"
                     alt="このサイトのリポジトリ"
                 />
             </a>
