@@ -1,1 +1,1 @@
-import e from"../components/pages/Home.js";import r from"../components/pages/Profile.js";let o={};const a=new URLSearchParams(window.location.search);a.has("routemap")||(o={"/":e,"/profile":r});export default o;
+import o from"../components/pages/Home.svelte.js";import r from"../components/pages/Profile.svelte.js";let e={};const s=new URLSearchParams(window.location.search);s.has("routemap")||(e={"/":o,"/profile":r});export default e;

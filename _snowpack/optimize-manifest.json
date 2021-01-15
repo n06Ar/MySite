@@ -1,0 +1,37 @@
+{
+  "imports": {
+    "/index.html": {
+      "entry": [
+        "/_dist_/index.js"
+      ],
+      "css": [
+        "/_dist_/style.css",
+        "/favicon.jpeg"
+      ],
+      "js": [
+        "/_dist_/components/App.svelte.css.proxy.js",
+        "/_dist_/components/App.svelte.js",
+        "/_dist_/components/common/Footer.svelte.css.proxy.js",
+        "/_dist_/components/common/Footer.svelte.js",
+        "/_dist_/components/common/Header.svelte.css.proxy.js",
+        "/_dist_/components/common/Header.svelte.js",
+        "/_dist_/components/pages/Home.svelte.css.proxy.js",
+        "/_dist_/components/pages/Home.svelte.js",
+        "/_dist_/components/pages/Profile.svelte.css.proxy.js",
+        "/_dist_/components/pages/Profile.svelte.js",
+        "/_dist_/index.js",
+        "/_dist_/utility/Router.js",
+        "/_snowpack/env.js",
+        "/_snowpack/pkg/common/_commonjsHelpers-eb5a497e.js",
+        "/_snowpack/pkg/common/index-39f34f06.js",
+        "/_snowpack/pkg/svelte-spa-router.js",
+        "/_snowpack/pkg/svelte/internal.js",
+        "/_snowpack/pkg/uikit.js",
+        "/_snowpack/pkg/uikit/dist/js/uikit-icons.js"
+      ]
+    }
+  },
+  "generated": {
+    "preloadedCSS": "/imported-styles.css"
+  }
+}
