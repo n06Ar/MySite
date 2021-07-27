@@ -4,8 +4,8 @@
 
 ## What is this?
 
-The repository is N06's Web site.
-This web site have N06' profile and article.
+The repository is N06's Website.
+This website has N06' profile and article.
 
 ## What does NaoNao mean ?
 
