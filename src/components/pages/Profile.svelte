@@ -131,7 +131,9 @@
                         <li class="profile-content-list__item">CakePHP</li>
                         <li class="profile-content-list__item">Laravel</li>
                         <li class="profile-content-list__item">Vue.js</li>
+                        <li class="profile-content-list__item">Nuxt.js</li>
                         <li class="profile-content-list__item">React</li>
+                        <li class="profile-content-list__item">Next.js</li>
                         <li class="profile-content-list__item">Svelte</li>
                         <li class="profile-content-list__item">Scss</li>
                     </ul>
