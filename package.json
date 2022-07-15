@@ -19,7 +19,7 @@
     },
     "dependencies": {
         "prettier": "^2.5.1",
-        "svelte": "^3.44.3",
+        "svelte": "^3.49.0",
         "uikit": "^3.9.4"
     },
     "devDependencies": {
