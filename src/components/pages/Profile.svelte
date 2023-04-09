@@ -1,5 +1,10 @@
 <script lang="ts">
-    const getAge = (year, month, day) => {
+    /**
+     * @param year {number} YYYY years number
+     * @param month {number} mm month number
+     * @param day {number} dd day number
+     */
+    const getAge = (year: number, month: number, day: number) => {
         const birthday = new Date(year, month - 1, day)
         const today = new Date()
 
@@ -109,6 +114,16 @@
                 </dd>
             </dl>
             <dl>
+                <dt>Academic Background</dt>
+                <dd>
+                    <ul>
+                        <li>浦和実業学園高等学校 普通科</li>
+                        <li>拓殖大学 工学部 情報工学科</li>
+                        <li>拓殖大学大学院 工学研究科 情報デザイン工学専攻</li>
+                    </ul>
+                </dd>
+            </dl>
+            <dl>
                 <dt>Programming Languages</dt>
                 <dd>
                     <ul class="profile-content__list -two-rows">
@@ -170,7 +185,8 @@
                             ><span
                                     data-uk-icon="file-text"
                                     aria-label="Qiita"
-                                ></span> @N06AR</a>
+                                ></span> @N06AR
+                            </a>
                         </li>
                         <li>
                             <a
