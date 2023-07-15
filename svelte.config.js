@@ -1,9 +1,11 @@
-const autoPreprocess = require('svelte-preprocess')
+import adapter from '@sveltejs/adapter-auto'
+import { vitePreprocess } from '@sveltejs/kit/vite'
 
-module.exports = {
-    preprocess: autoPreprocess({
-        defaults: {
-            script: 'typescript',
-        },
-    }),
+const config = {
+    preprocess: [vitePreprocess()],
+    kit: {
+        adapter: adapter(),
+    },
 }
+
+export default config
