@@ -1,22 +1,5 @@
 <script lang="ts">
-
 </script>
-
-<style lang="scss">
-    .home {
-        width: 80%;
-        max-width: 1440px;
-        margin: auto;
-    }
-
-    .home__content {
-        display: block;
-
-        &:not(:first-child) {
-            margin-top: 3rem;
-        }
-    }
-</style>
 
 <section class="home">
     <h2>
@@ -50,3 +33,19 @@
         </ul>
     </article>
 </section>
+
+<style lang="scss">
+    .home {
+        width: 80%;
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .home__content {
+        display: block;
+
+        &:not(:first-child) {
+            margin-top: 3rem;
+        }
+    }
+</style>
