@@ -1,7 +1,7 @@
 {
     "name": "my-site",
     "repository": "github.com:n06Ar/MySite.git",
-    "author": "NobuhitoArai <nobht.arai@gmail.com>",
+    "author": "NobuhitoArai <nobht.arai@n06ar.me>",
     "private": true,
     "scripts": {
         "dev": "vite dev",
