@@ -4,7 +4,7 @@
      * @param month {number} mm month number
      * @param day {number} dd day number
      */
-    const getAge = (year: number, month: number, day: number) => {
+    function getAge(year: number, month: number, day: number) {
         const birthday = new Date(year, month - 1, day)
         const today = new Date()
 
@@ -20,66 +20,6 @@
         return today < thisYearBirthday ? age - 1 : age
     }
 </script>
-
-<style lang="scss">
-    .profile {
-        width: 80%;
-        max-width: 1440px;
-        margin: auto;
-    }
-
-    .profile__body {
-        margin-top: 5rem;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .profile-body__content {
-        flex-basis: 40%;
-    }
-
-    .profile-body__content.-icon {
-        text-align: center;
-    }
-
-    .profile-body__content.-text {
-    }
-
-    .profile-body__content.-history {
-        display: none;
-        margin-top: 5rem;
-        flex-basis: 100%;
-    }
-
-    .profile__icon {
-        width: 50%;
-        height: auto;
-        border-radius: 50%;
-    }
-
-    .profile-content__list.-two-rows {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .profile-content-list__item {
-        flex-basis: 50%;
-    }
-
-    .profile-account__link {
-        color: #666;
-
-        &:link {
-            color: #666;
-        }
-    }
-
-    .profile-account__icon.-twitter {
-        color: #1da1f2;
-    }
-</style>
 
 <section class="profile">
     <h2>
@@ -166,26 +106,24 @@
                                 <span
                                     class="profile-account__icon -twitter"
                                     data-uk-icon="twitter"
-                                    aria-label="Twitter"
-                                ></span> @N06AR</a>
+                                    aria-label="Twitter"></span> @N06AR</a
+                            >
                         </li>
                         <li>
                             <a
                                 class="profile-account__link"
                                 href="https://github.com/n06Ar"
-                            ><span
-                                    data-uk-icon="github"
-                                    aria-label="GitHub"
-                                ></span> @N06AR</a>
+                                ><span data-uk-icon="github" aria-label="GitHub"
+                                ></span> @N06AR</a
+                            >
                         </li>
                         <li>
                             <a
                                 class="profile-account__link"
                                 href="https://qiita.com/N06AR"
-                            ><span
+                                ><span
                                     data-uk-icon="file-text"
-                                    aria-label="Qiita"
-                                ></span> @N06AR
+                                    aria-label="Qiita"></span> @N06AR
                             </a>
                         </li>
                         <li>
@@ -195,8 +133,7 @@
                             >
                                 <span
                                     data-uk-icon="bookmark"
-                                    aria-label="Hatena Blog"
-                                ></span> @N06AR
+                                    aria-label="Hatena Blog"></span> @N06AR
                             </a>
                         </li>
                     </ul>
@@ -208,3 +145,63 @@
         </section>
     </section>
 </section>
+
+<style lang="scss">
+    .profile {
+        width: 80%;
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    .profile__body {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .profile-body__content {
+        flex-basis: 40%;
+    }
+
+    .profile-body__content.-icon {
+        text-align: center;
+    }
+
+    .profile-body__content.-text {
+    }
+
+    .profile-body__content.-history {
+        display: none;
+        margin-top: 5rem;
+        flex-basis: 100%;
+    }
+
+    .profile__icon {
+        width: 50%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .profile-content__list.-two-rows {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .profile-content-list__item {
+        flex-basis: 50%;
+    }
+
+    .profile-account__link {
+        color: #666;
+
+        &:link {
+            color: #666;
+        }
+    }
+
+    .profile-account__icon.-twitter {
+        color: #1da1f2;
+    }
+</style>
