@@ -27,7 +27,7 @@ jobs:
       run: yarn set version berry
 
     - name: install
-      run: yarn
+      run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
 
     - name: build
       run: yarn build
