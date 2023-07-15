@@ -14,7 +14,8 @@
         "format": "prettier --plugin-search-dir . --write ."
     },
     "devDependencies": {
-        "@sveltejs/adapter-auto": "^2.0.0",
+        "@sveltejs/adapter-static": "^2.0.2",
+        "sass": "^1.63.6",
         "@sveltejs/kit": "^1.20.4",
         "eslint": "^8.28.0",
         "eslint-config-prettier": "^8.5.0",
@@ -28,8 +29,5 @@
         "vite": "^4.4.2"
     },
     "packageManager": "yarn@3.1.1",
-    "type": "module",
-    "dependencies": {
-        "sass": "^1.63.6"
-    }
+    "type": "module"
 }
