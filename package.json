@@ -3,6 +3,7 @@
     "repository": "github.com:n06Ar/MySite.git",
     "author": "NobuhitoArai <nobht.arai@n06ar.me>",
     "private": true,
+    "version": "2.0.0",
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
