@@ -9,8 +9,10 @@
         "paths": {
             "*": ["*"],
             "src/*": ["src/*"],
-            "public/*": ["public/*"]
+            "public/*": ["public/*"],
+            "@components/*": ["src/components/*"],
         },
+        "includes": ["**/*.js","**/*.ts","**/*.svelte"],
         "noEmit": true,
         "strict": true,
         "skipLibCheck": true,

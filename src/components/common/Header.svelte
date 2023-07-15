@@ -1,6 +1,45 @@
-<script lang="ts">
-    import Router, { link } from 'svelte-spa-router'
-</script>
+<header
+    data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
+>
+    <nav class="uk-navbar-container uk-margin" data-uk-navbar>
+        <div class="header">
+            <div class="uk-navbar-left">
+                <h1 class="header__title uk-logo">
+                    <a href="/" class="header-title__text"> NaoNao </a>
+                </h1>
+            </div>
+
+            <div class="uk-navbar-right">
+                <ul class="header__nav uk-navbar-nav">
+                    <li>
+                        <a href="/" class="header-nav__link">
+                            <span uk-icon="home" aria-hidden="true"></span>
+                            <span class="header-nav__letter-gap"></span> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/profile" class="header-nav__link">
+                            <span uk-icon="user" aria-hidden="true"></span>
+                            <span class="header-nav__letter-gap"></span> Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://n06ar.hatenablog.com"
+                            class="header-nav__link"
+                        >
+                            <span uk-icon="bookmark" aria-hidden="true"></span>
+                            <span class="header-nav__letter-gap"></span> Blog
+                            <span class="header-nav__letter-gap"></span>
+                            <span uk-icon="icon: push;" aria-hidden="true"
+                            ></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
 <style lang="scss">
     .header {
@@ -34,51 +73,3 @@
         margin-right: 0.5rem;
     }
 </style>
-
-<header
-    data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky"
->
-    <nav class="uk-navbar-container uk-margin" data-uk-navbar>
-        <div class="header">
-            <div class="uk-navbar-left">
-                <h1 class="header__title uk-logo">
-                    <a href="/" use:link class="header-title__text"> NaoNao </a>
-                </h1>
-            </div>
-
-            <div class="uk-navbar-right">
-                <ul class="header__nav uk-navbar-nav">
-                    <li>
-                        <a href="/" use:link class="header-nav__link">
-                            <span data-uk-icon="home" aria-hidden="true"></span>
-                            <span class="header-nav__letter-gap"></span> Home
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/profile" use:link class="header-nav__link">
-                            <span data-uk-icon="user" aria-hidden="true"></span>
-                            <span class="header-nav__letter-gap"></span> Profile
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="https://n06ar.hatenablog.com"
-                            class="header-nav__link"
-                        >
-                            <span
-                                data-uk-icon="bookmark"
-                                aria-hidden="true"
-                            ></span>
-                            <span class="header-nav__letter-gap"></span> Blog <span
-                                class="header-nav__letter-gap"
-                            ></span><span
-                                data-uk-icon="icon: push;"
-                                aria-hidden="true"
-                            ></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
