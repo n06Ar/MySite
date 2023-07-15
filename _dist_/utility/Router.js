@@ -1,1 +1,0 @@
-import o from"../components/pages/Home.svelte.js";import r from"../components/pages/Profile.svelte.js";let e={};const s=new URLSearchParams(window.location.search);s.has("routemap")||(e={"/":o,"/profile":r});export default e;

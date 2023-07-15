@@ -1,1 +1,0 @@
-import*as o from"../_snowpack/env.js";import.meta.env=o;import p from"./components/App.svelte.js";import e from"../_snowpack/pkg/uikit.js";import t from"../_snowpack/pkg/uikit/dist/js/uikit-icons.js";e.use(t);const i=new p({target:document.body});export default i;
