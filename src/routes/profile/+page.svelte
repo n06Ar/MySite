@@ -54,16 +54,6 @@
                 </dd>
             </dl>
             <dl>
-                <dt>Academic Background</dt>
-                <dd>
-                    <ul>
-                        <li>浦和実業学園高等学校 普通科</li>
-                        <li>拓殖大学 工学部 情報工学科</li>
-                        <li>拓殖大学大学院 工学研究科 情報デザイン工学専攻</li>
-                    </ul>
-                </dd>
-            </dl>
-            <dl>
                 <dt>Programming Languages</dt>
                 <dd>
                     <ul class="profile-content__list -two-rows">
