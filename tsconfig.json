@@ -13,6 +13,7 @@
             "@components/*": ["src/components/*"],
         },
         "includes": ["**/*.js","**/*.ts","**/*.svelte"],
+        "extends": "./.svelte-kit/tsconfig.json",
         "noEmit": true,
         "strict": true,
         "skipLibCheck": true,
