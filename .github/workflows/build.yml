@@ -12,25 +12,20 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20.x]
-
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Setup bun
+      uses: oven-sh/setup-bun@v1
       with:
-        node-version: ${{ matrix.node-version }}
+          bun-version: latest # 必要に応じて特定のバージョンを指定できます
 
-    - name: set-version
-      run: yarn set version berry
+    - name: Install dependencies
+      run: bun install
 
-    - name: install
-      run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
-
-    - name: build
-      run: yarn build
+    - name: Build project
+      run: bun run build
 
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
