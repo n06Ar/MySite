@@ -1,8 +1,8 @@
 {
-  "singleQuote": true,
-  "semi": false,
-  "tabWidth": 4,
-  "arrowParens": "avoid",
-  "svelteBracketNewLine": true,
-  "svelteStrictMode": true
+	"singleQuote": true,
+	"semi": false,
+	"tabWidth": 4,
+	"arrowParens": "avoid",
+	"svelteBracketNewLine": true,
+	"svelteStrictMode": true
 }
