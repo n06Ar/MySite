@@ -37,6 +37,5 @@
 		"flowbite-svelte": "^0.46.15",
 		"tailwind-merge": "^2.4.0"
 	},
-	"packageManager": "yarn@3.1.1",
 	"type": "module"
 }
