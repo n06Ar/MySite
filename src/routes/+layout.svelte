@@ -10,8 +10,13 @@
 </svelte:head>
 
 <Header />
-<main class="main">
-    <slot />
+<main class='main'>
+	<slot />
 </main>
 <Footer />
 
+<style>
+	.main {
+		@apply  bg-white dark:bg-gray-900 dark:text-primary-50;
+	}
+</style>
