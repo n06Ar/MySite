@@ -25,8 +25,8 @@ export default {
 					950: '#262c40',
 				},
 			},
-		}
+		},
 	},
 
-	plugins: [flowbitePlugin]
+	plugins: [flowbitePlugin],
 } as Config
