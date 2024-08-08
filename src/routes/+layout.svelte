@@ -3,6 +3,11 @@
     import Footer from '@components/common/Footer.svelte'
 </script>
 
+<svelte:head>
+	<title>NaoNao</title>
+	<meta name="description" content="N06's My Site." />
+</svelte:head>
+
 <Header />
 <main class="main">
     <slot />
