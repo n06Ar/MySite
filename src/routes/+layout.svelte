@@ -10,7 +10,9 @@
 </svelte:head>
 
 <Header />
-<main class='main'>
-	<slot />
+<main class='bg-white dark:bg-gray-900 dark:text-primary-50'>
+	<div class='container mx-auto my-12 sm:my-4'>
+		<slot />
+	</div>
 </main>
 <Footer />
