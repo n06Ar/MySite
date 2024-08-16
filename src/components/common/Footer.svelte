@@ -2,6 +2,6 @@
 	import { Footer, FooterCopyright } from 'flowbite-svelte'
 </script>
 
-<Footer class='pt-5 pb-5 flex-grow'>
+<Footer class='pt-5 pb-5 mt-auto text-primary-50 bg-primary-950'>
 	<FooterCopyright by='NaoNao' />
 </Footer>
