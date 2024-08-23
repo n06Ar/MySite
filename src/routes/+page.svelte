@@ -33,8 +33,9 @@
 			<Heading tag='h2' class='text-3xl'>
 				Hello!👋 My name is <A href='#Accounts'>N06AR</A>.
 			</Heading>
-
-			<P>I am a software engineer in Japan.</P>
+			<P>I am a software engineer working in Japan. I work for a company and do front-end and back-end
+				development.</P>
+			<P>This web site will contain programs I developed and blog.</P>
 		</section>
 
 		<section class='mb-12'>
