@@ -14,7 +14,7 @@
 				<HomeOutline class='inline-block' />
 				Home
 			</NavLi>
-			<NavLi href='/Playground' nonActiveClass='text-primary-50 '>
+			<NavLi href='/playground' nonActiveClass='text-primary-50 '>
 				<WandMagicSparklesOutline class='inline-block' />
 				Playground
 			</NavLi>
