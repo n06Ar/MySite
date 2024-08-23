@@ -41,8 +41,8 @@
 		<section class='mb-12'>
 			<Heading tag='h3' class='text-2xl'>Academic Backgrounds</Heading>
 			<List List='disc'>
-				<Li>拓殖大学 工学部 情報工学科</Li>
-				<Li>拓殖大学大学院 工学研究科 情報デザイン工学専攻</Li>
+				<Li>Takushoku University, Engineering Department of Information Engineering</Li>
+				<Li>Takushoku University Graduate School, Graduate School of Engineering, Department of Information Design Engineering</Li>
 			</List>
 		</section>
 
