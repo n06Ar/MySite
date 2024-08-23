@@ -1,6 +1,6 @@
 <script>
 	import { Navbar, NavBrand, NavUl, NavLi, Heading } from 'flowbite-svelte'
-	import { BookSolid, HomeOutline, ProfileCardOutline } from 'flowbite-svelte-icons'
+	import { BookSolid, HomeOutline, WandMagicSparklesOutline } from 'flowbite-svelte-icons'
 </script>
 
 <header class='sticky top-0 left-0 right-0'>
@@ -14,9 +14,9 @@
 				<HomeOutline class='inline-block' />
 				Home
 			</NavLi>
-			<NavLi href='/profile' nonActiveClass='text-primary-50 '>
-				<ProfileCardOutline class='inline-block' />
-				Profile
+			<NavLi href='/Playground' nonActiveClass='text-primary-50 '>
+				<WandMagicSparklesOutline class='inline-block' />
+				Playground
 			</NavLi>
 			<NavLi href='https://n06ar.hatenablog.com' nonActiveClass='text-primary-50 '>
 				<BookSolid class='inline-block' />
