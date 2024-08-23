@@ -1,52 +1,107 @@
-<script lang="ts">
+<script lang='ts'>
+	import { A, Heading, Li, List, P } from 'flowbite-svelte'
+	import { GithubSolid, XSolid, BookSolid } from 'flowbite-svelte-icons'
+
+	const SKILL_EXPERIENCES = {
+		languages: ['Java', 'PHP', 'Objective-C', 'Swift', 'KotLin', 'JavaScript', 'HTML', 'CSS'],
+		frameworks: ['Spring', 'Ktor', 'CakePHP', 'Laravel', 'React', 'Next.js', 'Vue.js', 'Nuxt.js', 'Svelte', 'SvelteKit', 'Node.js', 'Express.js', 'bun']
+	}
+
+	const PACKAGES = {
+		'Svelte': 'https://svelte.dev/',
+		'Svelte Kit': 'https://kit.svelte.jp/',
+		'Vite': 'https://vitejs.dev',
+		'TypeScript': 'https://www.typescriptlang.org/',
+		'Sass': 'https://sass-lang.com/',
+		'tailwindcss': 'https://tailwindcss.com',
+		'Flowbite': 'https://flowbite.com',
+		'Flowbite Svelte': 'https://flowbite-svelte.com/',
+	}
 </script>
 
-<section class="home">
-    <h2>
-        <span data-uk-icon="icon: home; ratio: 1.5" aria-hidden="true"></span> Home
-    </h2>
-    <article class="home__content">
-        <h3>ここはなんですか？</h3>
-        <p>
-            私、N06ARが、「そういえば個人サイトを作っていないな」とふと思い作ったサイトがここです。
-        </p>
-        <div>
-            <a href="https://github.com/n06ar/mysite">
-                <img
-                    src="https://github-readme-stats.vercel.app/api/pin/?username=n06Ar&repo=MySite&show_owner=true"
-                    alt="このサイトのリポジトリ"
-                />
-            </a>
-        </div>
-    </article>
-    <article class="home__content">
-        <h3>このサイトを作るのに使っているもの</h3>
-        <p>
-            このサイトを作るにあたり次のFrameworkやLibrary、Packageを使いました
-        </p>
-        <ul>
-            <li><a href="https://svelte.dev/">Svelte</a></li>
-            <li><a href="https://kit.svelte.jp/">Svelte Kit</a></li>
-            <li><a href="https://vitejs.dev">Vite</a></li>
-            <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-            <li><a href="https://sass-lang.com/">Sass</a></li>
-            <li><a href="https://getuikit.com">UIkit</a></li>
-        </ul>
-    </article>
-</section>
+<div class='mt-8 flex'>
+	<section class='md:w-1/4 sm:w-full'>
+		<img
+			class='w-24 ml-auto mr-auto rounded-full'
+			src='https://avatars0.githubusercontent.com/u/56122838?s=460&u=223fe136c3c00e8150fe1967439ae3e7b5ca87d5&v=4'
+			alt="N06AR's profile icon"
+		/>
+	</section>
 
-<style lang="scss">
-    .home {
-        width: 80%;
-        max-width: 1440px;
-        margin: auto;
-    }
+	<div class='md:w-3/4 sm:w-full'>
+		<section class='mb-12'>
+			<Heading tag='h2' class='text-3xl'>
+				Hello!👋 My name is <A href='#Accounts'>N06AR</A>.
+			</Heading>
+			<P>I am a software engineer working in Japan. I work for a company and do front-end and back-end
+				development.</P>
+			<P>This web site will contain programs I developed and blog.</P>
+		</section>
 
-    .home__content {
-        display: block;
+		<section class='mb-12'>
+			<Heading tag='h3' class='text-2xl'>Academic Backgrounds</Heading>
+			<List List='disc'>
+				<Li>Takushoku University, Engineering Department of Information Engineering</Li>
+				<Li>Takushoku University Graduate School, Graduate School of Engineering, Department of Information Design Engineering</Li>
+			</List>
+		</section>
 
-        &:not(:first-child) {
-            margin-top: 3rem;
-        }
-    }
-</style>
+		<section class='mb-12 flex flex-wrap'>
+			<Heading tag='h3' class='w-full text-2xl'>Development Skills</Heading>
+			<div class='w-1/2'>
+				<Heading tag='h4' class='text-xl'>Programming & Markup Languages</Heading>
+				<List>
+					{#each SKILL_EXPERIENCES.languages as language}
+						<Li>{language}</Li>
+					{/each}
+				</List>
+			</div>
+
+			<div class='w-1/2'>
+				<Heading tag='h4' class='text-xl'>Frameworks</Heading>
+				<List>
+					{#each SKILL_EXPERIENCES.frameworks as framework}
+						<Li>{framework}</Li>
+					{/each}
+				</List>
+			</div>
+		</section>
+
+		<section class='mb-12'>
+			<Heading tag='h3' id='Accounts'>Accounts</Heading>
+			<List>
+				<Li>
+					<A href='https://twitter.com/N06Ar'>
+						<XSolid class='inLine-block' />
+						@N06AR
+					</A>
+				</Li>
+				<Li>
+					<A href='https://github.com/n06Ar'>
+						<GithubSolid class='inLine-block' />
+						@N06AR
+					</A>
+				</Li>
+				<Li>
+					<A href='https://n06ar.hatenablog.com/'>
+						<BookSolid class='inLine-block' />
+						@N06AR
+					</A>
+				</Li>
+			</List>
+
+		</section>
+
+		<section class='mb-12'>
+			<Heading tag='h2'>Package List</Heading>
+			<P>I used the following packages to create this site</P>
+			<List>
+				{#each Object.entries(PACKAGES) as [name, url]}
+					<Li>
+						<A href='{url}'>{name}</A>
+					</Li>
+				{/each}
+			</List>
+		</section>
+	</div>
+</div>
