@@ -6,6 +6,17 @@
 		languages: ['Java', 'PHP', 'Objective-C', 'Swift', 'KotLin', 'JavaScript', 'HTML', 'CSS'],
 		frameworks: ['Spring', 'Ktor', 'CakePHP', 'Laravel', 'React', 'Next.js', 'Vue.js', 'Nuxt.js', 'Svelte', 'SvelteKit', 'Node.js', 'Express.js', 'bun']
 	}
+
+	const PACKAGES = {
+		'Svelte': 'https://svelte.dev/',
+		'Svelte Kit': 'https://kit.svelte.jp/',
+		'Vite': 'https://vitejs.dev',
+		'TypeScript': 'https://www.typescriptlang.org/',
+		'Sass': 'https://sass-lang.com/',
+		'tailwindcss': 'https://tailwindcss.com',
+		'Flowbite': 'https://flowbite.com',
+		'Flowbite Svelte': 'https://flowbite-svelte.com/',
+	}
 </script>
 
 <div class='mt-8 flex'>
@@ -84,12 +95,11 @@
 			<Heading tag='h2'>Package List</Heading>
 			<P>I used the following packages to create this site</P>
 			<List>
-				<Li><a href='https://svelte.dev/'>Svelte</a></Li>
-				<Li><a href='https://kit.svelte.jp/'>Svelte Kit</a></Li>
-				<Li><a href='https://vitejs.dev'>Vite</a></Li>
-				<Li><a href='https://www.typescriptlang.org/'>TypeScript</a></Li>
-				<Li><a href='https://sass-lang.com/'>Sass</a></Li>
-				<Li><a href='https://getuikit.com'>UIkit</a></Li>
+				{#each Object.entries(PACKAGES) as [name, url]}
+					<Li>
+						<A href='{url}'>{name}</A>
+					</Li>
+				{/each}
 			</List>
 		</section>
 	</div>
