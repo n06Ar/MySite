@@ -18,7 +18,7 @@
 	</section>
 
 	<div class='md:w-3/4 sm:w-full'>
-		<section class="mb-12">
+		<section class='mb-12'>
 			<Heading tag='h2' class='text-3xl'>
 				Hello!👋 My name is <A href='#Accounts'>N06AR</A>.
 			</Heading>
