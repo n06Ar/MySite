@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit'
 import { getBlogPageList } from '$lib/microCMS'
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({ url }: any) => {
+export const load: PageServerLoad = async ({ url }: { url: URL }) => {
 	const queries: { offset?: number; limit: number } = { limit: 50 }
 
 	if (url.searchParams.has('page')) {
