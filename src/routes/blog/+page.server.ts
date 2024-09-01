@@ -1,6 +1,5 @@
 import { error } from '@sveltejs/kit'
 import { getBlogPageList } from '$lib/microCMS'
-// @ts-ignore
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ url }: any) => {
