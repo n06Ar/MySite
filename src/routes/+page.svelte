@@ -9,7 +9,7 @@
 
 	const PACKAGES = {
 		'Svelte': 'https://svelte.dev/',
-		'Svelte Kit': 'https://kit.svelte.jp/',
+		'Svelte Kit': 'https://kit.svelte.dev/',
 		'Vite': 'https://vitejs.dev',
 		'TypeScript': 'https://www.typescriptlang.org/',
 		'Sass': 'https://sass-lang.com/',
