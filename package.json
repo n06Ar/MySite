@@ -25,6 +25,8 @@
 		"flowbite": "^2.4.1",
 		"flowbite-svelte": "^0.46.15",
 		"flowbite-svelte-icons": "^1.6.1",
+		"highlight.js": "^11.10.0",
+		"microcms-js-sdk": "^3.1.2",
 		"postcss": "^8.4.40",
 		"prettier": "^3.3.2",
 		"prettier-plugin-svelte": "^3.2.5",
@@ -36,8 +38,8 @@
 		"tailwindcss": "^3.4.7",
 		"three": "^0.166.0",
 		"typescript": "^5.5.2",
-		"vite": "^5.3.2",
-		"microcms-js-sdk": "^3.1.2"
+		"vite": "^5.3.2"
 	},
-	"type": "module"
+	"type": "module",
+	"packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",
 }
