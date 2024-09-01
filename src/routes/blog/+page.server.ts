@@ -2,12 +2,9 @@ import { error } from '@sveltejs/kit'
 import { getBlogPageList } from '$lib/microCMS'
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({ url }: { url: URL }) => {
-	const queries: { offset?: number; limit: number } = { limit: 50 }
+export const load: PageServerLoad = async () => {
+	const queries: { offset: number; limit: number } = { offset: 0, limit: 50 }
 
-	if (url.searchParams.has('page')) {
-		queries.offset = url.searchParams.get('page')
-	}
 	try {
 		return await getBlogPageList(queries)
 	} catch (e) {
