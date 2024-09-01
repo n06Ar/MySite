@@ -1,5 +1,5 @@
 <script>
-	import { Navbar, NavBrand, NavUl, NavLi, Heading } from 'flowbite-svelte'
+	import { Navbar, NavBrand, NavHamburger,NavUl, NavLi, Heading } from 'flowbite-svelte'
 	import { BookSolid, HomeOutline, WandMagicSparklesOutline } from 'flowbite-svelte-icons'
 </script>
 
@@ -8,6 +8,8 @@
 		<NavBrand href='/'>
 			<Heading tag='h1' class='text-2xl'>NaoNao</Heading>
 		</NavBrand>
+
+		<NavHamburger />
 
 		<NavUl>
 			<NavLi href='/'>
