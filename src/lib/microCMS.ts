@@ -37,17 +37,10 @@ export const getBlogPageList = async (
 }
 export const getBlogPageDetail = async (
 	contentId: string,
-	queries?: MicroCMSQueries,
-): Promise<Blog> => {
-	const { contents } = await client.getListDetail<BlogResponse>({
+	queries: MicroCMSQueries = {},
+): Promise<Blog> =>
+	await client.getListDetail<Blog>({
 		endpoint: 'blogs',
 		contentId,
 		queries,
 	})
-
-	if (!Array.isArray(contents) || contents.length === 0) {
-		throw new Error('Not found')
-	}
-
-	return contents[0]
-}
