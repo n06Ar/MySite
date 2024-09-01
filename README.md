@@ -9,4 +9,4 @@ This website has N06' profile and article.
 
 ## What does NaoNao mean ?
 
-NaoNao is meow of My family which my cat.
+NaoNao is my family cat's meow.

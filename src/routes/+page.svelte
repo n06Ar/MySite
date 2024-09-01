@@ -9,7 +9,7 @@
 
 	const PACKAGES = {
 		'Svelte': 'https://svelte.dev/',
-		'Svelte Kit': 'https://kit.svelte.jp/',
+		'Svelte Kit': 'https://kit.svelte.dev/',
 		'Vite': 'https://vitejs.dev',
 		'TypeScript': 'https://www.typescriptlang.org/',
 		'Sass': 'https://sass-lang.com/',
@@ -18,6 +18,11 @@
 		'Flowbite Svelte': 'https://flowbite-svelte.com/',
 	}
 </script>
+
+<svelte:head>
+	<title>NaoNao</title>
+	<meta name="description" content="N06's My Site." />
+</svelte:head>
 
 <div class='mt-8 flex'>
 	<section class='md:w-1/4 sm:w-full'>
