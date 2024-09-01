@@ -19,6 +19,11 @@
 	}
 </script>
 
+<svelte:head>
+	<title>NaoNao</title>
+	<meta name="description" content="N06's My Site." />
+</svelte:head>
+
 <div class='mt-8 flex'>
 	<section class='md:w-1/4 sm:w-full'>
 		<img
