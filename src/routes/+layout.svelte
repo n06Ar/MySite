@@ -11,7 +11,7 @@
 
 <Header />
 <main class='bg-white dark:bg-gray-900 dark:text-primary-50'>
-	<div class='container mx-auto my-12 sm:my-4'>
+	<div class='container mx-auto mb-12 sm:mb-4'>
 		<slot />
 	</div>
 </main>
