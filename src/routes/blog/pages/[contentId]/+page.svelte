@@ -57,7 +57,7 @@
 </article>
 
 <style lang='scss'>
-	@import 'highlight.js/styles/tokyo-night-dark.min.css';
+	@import '../../../../../node_modules/highlight.js/styles/tokyo-night-dark.min.css';
 
 	.content {
 		:global(h1) {
