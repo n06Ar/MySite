@@ -5,7 +5,7 @@ import type { PageServerLoad } from './$types'
 export const load: PageServerLoad = async ({
 	params,
 }: {
-	params: { page: number }
+	params: { page: string }
 }) => {
 	const queries: { offset: number; limit: number } = { offset: 0, limit: 50 }
 
