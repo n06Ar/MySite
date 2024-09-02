@@ -24,8 +24,8 @@
 	<meta name="description" content="N06's My Site." />
 </svelte:head>
 
-<div class='mt-8 flex'>
-	<section class='md:w-1/4 sm:w-full'>
+<div class='m-8 sm:m-auto sm:mt-8 flex flex-wrap'>
+	<section class='w-full md:w-1/4 pb-8 md:pb-0'>
 		<img
 			class='w-24 ml-auto mr-auto rounded-full'
 			src='https://avatars0.githubusercontent.com/u/56122838?s=460&u=223fe136c3c00e8150fe1967439ae3e7b5ca87d5&v=4'
