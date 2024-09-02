@@ -10,7 +10,7 @@ export const load: PageServerLoad = async ({
 	const queries: { offset: number; limit: number } = { offset: 0, limit: 50 }
 
 	if (params.page) {
-		queries.offset = params.page * queries.limit
+		queries.offset = Number(params.page - 1)
 	}
 	try {
 		return await getBlogPageList(queries)
