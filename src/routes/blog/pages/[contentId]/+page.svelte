@@ -61,7 +61,7 @@
 
 	.content {
 		:global(h1) {
-			@apply text-4xl mb-2;
+			@apply text-4xl my-4;
 
 			&::before {
 				content: "#";
@@ -70,7 +70,7 @@
 		}
 
 		:global(h2) {
-			@apply text-3xl mb-2;
+			@apply text-3xl my-3;
 
 			&::before {
 				content: "##";
@@ -79,7 +79,7 @@
 		}
 
 		:global(h3) {
-			@apply text-2xl mb-2;
+			@apply text-2xl my-2;
 
 			&::before {
 				content: "###";
@@ -88,19 +88,19 @@
 		}
 
 		:global(h4) {
-			@apply text-xl mb-2;
+			@apply text-xl my-2;
 
 			&::before {
-				content: "###";
+				content: "####";
 				@apply text-primary-800 dark:text-primary-500 mr-1
 			}
 		}
 
 		:global(h5) {
-			@apply text-lg mb-2;
+			@apply text-lg my-2;
 
 			&::before {
-				content: "###";
+				content: "#####";
 				@apply text-primary-800 dark:text-primary-500 mr-1
 			}
 		}
