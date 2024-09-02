@@ -11,7 +11,7 @@
 	<meta name='description' content='NaoNao blog' />
 </svelte:head>
 
-<Heading tag='h2' class='mb-12 px-4 sm:px-auto'>
+<Heading tag='h2' class='mt-8 mb-12 px-4 sm:px-auto'>
 	<BookSolid class='inline-block' size='xl' />
 	Blog
 </Heading>
@@ -23,7 +23,7 @@
 		>
 			<img src='{content.eyecatch?.url ?? "/images/No_Image.png"}'
 				 alt='{content.eyecatch ? content.title : "No Image"}'
-				 class='object-cover aspect-video'>
+				 class='rounded-t-lg object-cover aspect-video'>
 			<div class='h-full p-4 sm:p-6 flex flex-col justify-between'>
 				<Heading tag='h3' class='mb-4 text-xl'>{content.title}</Heading>
 				<Button class='w-fit mt-auto'>
