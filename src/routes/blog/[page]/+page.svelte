@@ -18,7 +18,7 @@
 
 <section class='flex flex-wrap gap-4 md:gap-12 px-4 sm:px-auto'>
 	{#each data.contents as content}
-		<a href='/blog/{content.id}'
+		<a href='/blog/pages/{content.id}'
 		   class='bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md w-full sm:w-1/4 md:w-1/4 max-w-sm flex flex-col hover:bg-gray-100 dark:hover:bg-gray-700'
 		>
 			<img src='{content.eyecatch?.url ?? "/images/No_Image.png"}'
