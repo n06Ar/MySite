@@ -15,7 +15,8 @@ export const load: PageServerLoad = async ({
 	try {
 		return await getBlogPageList(queries)
 	} catch (e) {
-		error(500)
+		console.error('Error fetching blog page list:', e)
+		error(500, 'An unexpected error occurred')
 	}
 }
 
