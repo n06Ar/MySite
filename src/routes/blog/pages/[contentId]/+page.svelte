@@ -65,6 +65,9 @@
 
 			&::before {
 				content: "#";
+			}
+
+			&::before {
 				@apply text-primary-800 dark:text-primary-500 mr-1
 			}
 		}
@@ -74,6 +77,9 @@
 
 			&::before {
 				content: "##";
+			}
+
+			&::before {
 				@apply text-primary-800 dark:text-primary-500 mr-1
 			}
 		}
@@ -83,6 +89,9 @@
 
 			&::before {
 				content: "###";
+			}
+
+			&::before {
 				@apply text-primary-800 dark:text-primary-500 mr-1
 			}
 		}
@@ -92,6 +101,9 @@
 
 			&::before {
 				content: "####";
+			}
+
+			&::before {
 				@apply text-primary-800 dark:text-primary-500 mr-1
 			}
 		}
@@ -101,6 +113,9 @@
 
 			&::before {
 				content: "#####";
+			}
+
+			&::before {
 				@apply text-primary-800 dark:text-primary-500 mr-1
 			}
 		}
