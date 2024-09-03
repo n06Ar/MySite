@@ -1,18 +1,22 @@
 import { error } from '@sveltejs/kit'
-import { getBlogPageDetail } from '$lib/microCMS'
+import { getBlogPageList } from '$lib/microCMS'
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({ params }: { params: object }) => {
-	try {
-		const queries: { draftKey?: string } = {}
+export const load: PageServerLoad = async ({
+	params,
+}: {
+	params: { page: string }
+}) => {
+	const queries: { offset: number; limit: number } = { offset: 0, limit: 50 }
 
-		return await getBlogPageDetail(params.page, queries)
-	} catch (e: unknown) {
-		let status = 500
-		if ((e as Error).message === 'Not found') {
-			status = 404
-		}
-		error(status)
+	if (params.page) {
+		queries.offset = (Number(params.page) - 1) * queries.limit
+	}
+	try {
+		return await getBlogPageList(queries)
+	} catch (e) {
+		console.error('Error fetching blog page list:', e)
+		error(500, 'An unexpected error occurred')
 	}
 }
 

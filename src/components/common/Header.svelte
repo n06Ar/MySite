@@ -20,7 +20,7 @@
 				<WandMagicSparklesOutline class='inline-block' />
 				Playground
 			</NavLi>
-			<NavLi href='/blog'>
+			<NavLi href='/blog/1'>
 				<BookSolid class='inline-block' />
 				Blog
 			</NavLi>

@@ -1,132 +1,39 @@
 <script lang='ts'>
-	import { Badge, Heading } from 'flowbite-svelte'
-	import { TagSolid } from 'flowbite-svelte-icons'
-	import { load } from 'cheerio'
-	import highlight from 'highlight.js'
-
+	import { Heading, Button } from 'flowbite-svelte'
+	import { BookSolid, ArrowRightOutline } from 'flowbite-svelte-icons'
 	import type { PageData } from './$types'
 
 	export let data: PageData
-
-	let article = ''
-	let description = ''
-	if (data.content) {
-		const cheeArticle = load(data.content)
-		cheeArticle('pre code').each((_, elm) => {
-			const result = highlight.highlightAuto(cheeArticle(elm).text())
-			cheeArticle(elm).html(result.value)
-			cheeArticle(elm).addClass('hljs')
-		})
-		article = cheeArticle.html()
-
-		const cheeDescription = load(data.content)
-		description = cheeDescription('*').text().substring(0, 50)
-	}
-
-	export { article, description }
 </script>
 
 <svelte:head>
-	<title>{data.title} | NaoNao Blog</title>
-	<meta name='description' content='{description}' />
+	<title>Blog | NaoNao</title>
+	<meta name='description' content='NaoNao blog' />
 </svelte:head>
 
-<article>
-	{#if data.eyecatch}
-		<img class='w-full' src={data.eyecatch?.url ?? "/images/No_Image.png"}
-			 alt='{data.title}' />
-	{/if}
+<Heading tag='h2' class='mt-8 mb-12 px-4 sm:px-auto'>
+	<BookSolid class='inline-block' size='xl' />
+	Blog
+</Heading>
 
-	<div class='mt-8 mx-4 sm:mx-auto'>
-		<Heading tag='h1' class='text-4xl mb-8'>{data.title}</Heading>
+<section class='flex flex-wrap gap-4 md:gap-12 px-4 sm:px-auto'>
+	{#each data.contents as content}
+		{#key content.id}
+			<a href='/blog/pages/{content.id}'
+			   class='bg-white dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-lg border border-gray-200 dark:border-gray-700 divide-gray-200 dark:divide-gray-700 shadow-md w-full sm:w-1/4 md:w-1/4 max-w-sm flex flex-col hover:bg-gray-100 dark:hover:bg-gray-700'
+			>
+				<img src='{content.eyecatch?.url ?? "/images/No_Image.png"}'
+					 alt='{content.eyecatch ? content.title : "No Image"}'
+					 class='rounded-t-lg object-cover aspect-video'>
+				<div class='h-full p-4 sm:p-6 flex flex-col justify-between'>
+					<Heading tag='h3' class='mb-4 text-xl'>{content.title}</Heading>
+					<Button class='w-fit mt-auto'>
+						Read more
+						<ArrowRightOutline class='w-6 h-6 ms-2 text-white' />
+					</Button>
+				</div>
+			</a>
+		{/key}
+	{/each}
+</section>
 
-		<main class='content'>
-			{@html article}
-		</main>
-
-		<div class='flex justify-between flex-wrap'>
-			{#if data.category}
-				<Badge border class='ml-auto'>
-					<TagSolid class='mr-1' />
-					{data.category.name}
-				</Badge>
-			{/if}
-		</div>
-	</div>
-
-</article>
-
-<style lang='scss'>
-	@import 'highlight.js/styles/tokyo-night-dark.min.css';
-
-	.content {
-		:global(h1) {
-			@apply text-4xl mb-2;
-
-			&::before {
-				content: "#";
-				@apply text-primary-800 dark:text-primary-500 mr-1
-			}
-		}
-
-		:global(h2) {
-			@apply text-3xl mb-2;
-
-			&::before {
-				content: "##";
-				@apply text-primary-800 dark:text-primary-500 mr-1
-			}
-		}
-
-		:global(h3) {
-			@apply text-2xl mb-2;
-
-			&::before {
-				content: "###";
-				@apply text-primary-800 dark:text-primary-500 mr-1
-			}
-		}
-
-		:global(h4) {
-			@apply text-xl mb-2;
-
-			&::before {
-				content: "###";
-				@apply text-primary-800 dark:text-primary-500 mr-1
-			}
-		}
-
-		:global(h5) {
-			@apply text-lg mb-2;
-
-			&::before {
-				content: "###";
-				@apply text-primary-800 dark:text-primary-500 mr-1
-			}
-		}
-
-		:global(a) {
-			@apply hover:underline text-primary-600 dark:text-primary-500;
-		}
-
-		:global(blockquote) {
-			@apply p-4 pr-0 mt-1 mb-1 border-l-2 border-primary-400;
-		}
-
-		:global(pre) {
-			@apply my-4 w-full border-8 border-primary-950 rounded-md bg-primary-950;
-
-			:global(code) {
-				@apply my-1 mx-3 text-primary-50;
-			}
-		}
-
-		:global(ul) {
-			@apply pl-5 list-disc
-		}
-
-		:global(ol) {
-			@apply pl-6 list-decimal
-		}
-	}
-</style>
