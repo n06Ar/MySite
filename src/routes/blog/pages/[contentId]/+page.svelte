@@ -128,11 +128,15 @@
 			@apply p-4 pr-0 mt-1 mb-1 border-l-2 border-primary-400;
 		}
 
+		:global(code) {
+			@apply px-2 py-1 rounded-md text-primary-50 bg-primary-950;
+		}
+
 		:global(pre) {
 			@apply my-4 w-full border-8 border-primary-950 rounded-md bg-primary-950;
 
 			:global(code) {
-				@apply my-1 mx-3 text-primary-50;
+				@apply my-1 mx-3 text-primary-50 bg-inherit;
 			}
 		}
 
