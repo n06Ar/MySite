@@ -79,7 +79,7 @@
 			"./package",
 			"**/.env",
 			"**/.env.*",
-			"**/bun.lockb",
+			"**/bun.lockb"
 		]
 	},
 	"javascript": {
