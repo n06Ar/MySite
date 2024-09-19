@@ -1,45 +1,45 @@
 <script lang='ts'>
-	import { A, Heading, Li, List, P } from 'flowbite-svelte'
-	import { GithubSolid, XSolid, BookSolid } from 'flowbite-svelte-icons'
+import { A, Heading, Li, List, P } from 'flowbite-svelte'
+import { BookSolid, GithubSolid, XSolid } from 'flowbite-svelte-icons'
 
-	const SKILL_EXPERIENCES = {
-		languages: [
-			'Java',
-			'PHP',
-			'Objective-C',
-			'Swift',
-			'KotLin',
-			'JavaScript',
-			'HTML',
-			'CSS'
-		],
-		frameworks: [
-			'Spring',
-			'Ktor',
-			'CakePHP',
-			'Laravel',
-			'React',
-			'Next.js',
-			'Vue.js',
-			'Nuxt.js',
-			'Svelte',
-			'SvelteKit',
-			'Node.js',
-			'Express.js',
-			'bun'
-		]
-	}
+const _SKILL_EXPERIENCES = {
+	languages: [
+		'Java',
+		'PHP',
+		'Objective-C',
+		'Swift',
+		'KotLin',
+		'JavaScript',
+		'HTML',
+		'CSS',
+	],
+	frameworks: [
+		'Spring',
+		'Ktor',
+		'CakePHP',
+		'Laravel',
+		'React',
+		'Next.js',
+		'Vue.js',
+		'Nuxt.js',
+		'Svelte',
+		'SvelteKit',
+		'Node.js',
+		'Express.js',
+		'bun',
+	],
+}
 
-	const PACKAGES = {
-		Svelte: 'https://svelte.dev/',
-		'Svelte Kit': 'https://kit.svelte.dev/',
-		Vite: 'https://vitejs.dev',
-		TypeScript: 'https://www.typescriptlang.org/',
-		Sass: 'https://sass-lang.com/',
-		tailwindcss: 'https://tailwindcss.com',
-		Flowbite: 'https://flowbite.com',
-		'Flowbite Svelte': 'https://flowbite-svelte.com/'
-	}
+const _PACKAGES = {
+	Svelte: 'https://svelte.dev/',
+	'Svelte Kit': 'https://kit.svelte.dev/',
+	Vite: 'https://vitejs.dev',
+	TypeScript: 'https://www.typescriptlang.org/',
+	Sass: 'https://sass-lang.com/',
+	tailwindcss: 'https://tailwindcss.com',
+	Flowbite: 'https://flowbite.com',
+	'Flowbite Svelte': 'https://flowbite-svelte.com/',
+}
 </script>
 
 <svelte:head>

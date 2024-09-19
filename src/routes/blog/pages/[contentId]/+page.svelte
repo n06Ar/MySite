@@ -1,7 +1,7 @@
 <script lang='ts'>
+	import { load } from 'cheerio'
 	import { Badge, Heading } from 'flowbite-svelte'
 	import { TagSolid } from 'flowbite-svelte-icons'
-	import { load } from 'cheerio'
 	import highlight from 'highlight.js'
 
 	import type { PageData } from './$types'

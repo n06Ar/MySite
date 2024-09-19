@@ -1,6 +1,6 @@
 <script lang='ts'>
-	import { Heading, Button } from 'flowbite-svelte'
-	import { BookSolid, ArrowRightOutline } from 'flowbite-svelte-icons'
+	import { Button, Heading } from 'flowbite-svelte'
+	import { ArrowRightOutline, BookSolid } from 'flowbite-svelte-icons'
 	import type { PageData } from './$types'
 
 	export let data: PageData

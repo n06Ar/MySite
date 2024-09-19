@@ -1,11 +1,11 @@
 <script>
 	import {
-		Navbar,
+		Heading,
 		NavBrand,
 		NavHamburger,
-		NavUl,
 		NavLi,
-		Heading
+		NavUl,
+		Navbar
 	} from 'flowbite-svelte'
 	import {
 		BookSolid,
