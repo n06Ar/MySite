@@ -79,7 +79,7 @@ const _PACKAGES = {
 			<div class='w-1/2'>
 				<Heading tag='h4' class='text-xl'>Programming & Markup Languages</Heading>
 				<List>
-					{#each SKILL_EXPERIENCES.languages as language}
+					{#each _SKILL_EXPERIENCES.languages as language}
 						<Li>{language}</Li>
 					{/each}
 				</List>
@@ -88,7 +88,7 @@ const _PACKAGES = {
 			<div class='w-1/2'>
 				<Heading tag='h4' class='text-xl'>Frameworks</Heading>
 				<List>
-					{#each SKILL_EXPERIENCES.frameworks as framework}
+					{#each _SKILL_EXPERIENCES.frameworks as framework}
 						<Li>{framework}</Li>
 					{/each}
 				</List>
@@ -124,7 +124,7 @@ const _PACKAGES = {
 			<Heading tag='h2'>Package List</Heading>
 			<P>I used the following packages to create this site</P>
 			<List>
-				{#each Object.entries(PACKAGES) as [name, url]}
+				{#each Object.entries(_PACKAGES) as [name, url]}
 					<Li>
 						<A href='{url}'>{name}</A>
 					</Li>
