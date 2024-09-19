@@ -1,29 +1,29 @@
 <script lang='ts'>
-	import { load } from 'cheerio'
-	import { Badge, Heading } from 'flowbite-svelte'
-	import { TagSolid } from 'flowbite-svelte-icons'
-	import highlight from 'highlight.js'
+import { load } from 'cheerio'
+import { Badge, Heading } from 'flowbite-svelte'
+import { TagSolid } from 'flowbite-svelte-icons'
+import highlight from 'highlight.js'
 
-	import type { PageData } from './$types'
+import type { PageData } from './$types'
 
-	export let data: PageData
+export let data: PageData
 
-	let article = ''
-	let description = ''
-	if (data.content) {
-		const cheeArticle = load(data.content)
-		cheeArticle('pre code').each((_, elm) => {
-			const result = highlight.highlightAuto(cheeArticle(elm).text())
-			cheeArticle(elm).html(result.value)
-			cheeArticle(elm).addClass('hljs')
-		})
-		article = cheeArticle.html()
+let article = ''
+let description = ''
+if (data.content) {
+	const cheeArticle = load(data.content)
+	cheeArticle('pre code').each((_, elm) => {
+		const result = highlight.highlightAuto(cheeArticle(elm).text())
+		cheeArticle(elm).html(result.value)
+		cheeArticle(elm).addClass('hljs')
+	})
+	article = cheeArticle.html()
 
-		const cheeDescription = load(data.content)
-		description = cheeDescription('*').text().substring(0, 50)
-	}
+	const cheeDescription = load(data.content)
+	description = cheeDescription('*').text().substring(0, 50)
+}
 
-	export { article, description }
+export { article, description }
 </script>
 
 <svelte:head>

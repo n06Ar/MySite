@@ -1,17 +1,17 @@
 <script>
-	import {
-		Heading,
-		NavBrand,
-		NavHamburger,
-		NavLi,
-		NavUl,
-		Navbar
-	} from 'flowbite-svelte'
-	import {
-		BookSolid,
-		HomeOutline,
-		WandMagicSparklesOutline
-	} from 'flowbite-svelte-icons'
+import {
+	Heading,
+	NavBrand,
+	NavHamburger,
+	NavLi,
+	NavUl,
+	Navbar,
+} from 'flowbite-svelte'
+import {
+	BookSolid,
+	HomeOutline,
+	WandMagicSparklesOutline,
+} from 'flowbite-svelte-icons'
 </script>
 
 <header class='sticky top-0 left-0 right-0'>
