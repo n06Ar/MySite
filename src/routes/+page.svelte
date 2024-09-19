@@ -1,22 +1,45 @@
 <script lang='ts'>
-	import { A, Heading, Li, List, P } from 'flowbite-svelte'
-	import { GithubSolid, XSolid, BookSolid } from 'flowbite-svelte-icons'
+import { A, Heading, Li, List, P } from 'flowbite-svelte'
+import { BookSolid, GithubSolid, XSolid } from 'flowbite-svelte-icons'
 
-	const SKILL_EXPERIENCES = {
-		languages: ['Java', 'PHP', 'Objective-C', 'Swift', 'KotLin', 'JavaScript', 'HTML', 'CSS'],
-		frameworks: ['Spring', 'Ktor', 'CakePHP', 'Laravel', 'React', 'Next.js', 'Vue.js', 'Nuxt.js', 'Svelte', 'SvelteKit', 'Node.js', 'Express.js', 'bun']
-	}
+const _SKILL_EXPERIENCES = {
+	languages: [
+		'Java',
+		'PHP',
+		'Objective-C',
+		'Swift',
+		'KotLin',
+		'JavaScript',
+		'HTML',
+		'CSS',
+	],
+	frameworks: [
+		'Spring',
+		'Ktor',
+		'CakePHP',
+		'Laravel',
+		'React',
+		'Next.js',
+		'Vue.js',
+		'Nuxt.js',
+		'Svelte',
+		'SvelteKit',
+		'Node.js',
+		'Express.js',
+		'bun',
+	],
+}
 
-	const PACKAGES = {
-		'Svelte': 'https://svelte.dev/',
-		'Svelte Kit': 'https://kit.svelte.dev/',
-		'Vite': 'https://vitejs.dev',
-		'TypeScript': 'https://www.typescriptlang.org/',
-		'Sass': 'https://sass-lang.com/',
-		'tailwindcss': 'https://tailwindcss.com',
-		'Flowbite': 'https://flowbite.com',
-		'Flowbite Svelte': 'https://flowbite-svelte.com/',
-	}
+const _PACKAGES = {
+	Svelte: 'https://svelte.dev/',
+	'Svelte Kit': 'https://kit.svelte.dev/',
+	Vite: 'https://vitejs.dev',
+	TypeScript: 'https://www.typescriptlang.org/',
+	Sass: 'https://sass-lang.com/',
+	tailwindcss: 'https://tailwindcss.com',
+	Flowbite: 'https://flowbite.com',
+	'Flowbite Svelte': 'https://flowbite-svelte.com/',
+}
 </script>
 
 <svelte:head>
@@ -56,7 +79,7 @@
 			<div class='w-1/2'>
 				<Heading tag='h4' class='text-xl'>Programming & Markup Languages</Heading>
 				<List>
-					{#each SKILL_EXPERIENCES.languages as language}
+					{#each _SKILL_EXPERIENCES.languages as language}
 						<Li>{language}</Li>
 					{/each}
 				</List>
@@ -65,7 +88,7 @@
 			<div class='w-1/2'>
 				<Heading tag='h4' class='text-xl'>Frameworks</Heading>
 				<List>
-					{#each SKILL_EXPERIENCES.frameworks as framework}
+					{#each _SKILL_EXPERIENCES.frameworks as framework}
 						<Li>{framework}</Li>
 					{/each}
 				</List>
@@ -101,7 +124,7 @@
 			<Heading tag='h2'>Package List</Heading>
 			<P>I used the following packages to create this site</P>
 			<List>
-				{#each Object.entries(PACKAGES) as [name, url]}
+				{#each Object.entries(_PACKAGES) as [name, url]}
 					<Li>
 						<A href='{url}'>{name}</A>
 					</Li>

@@ -11,7 +11,9 @@
 			"src/*": ["src/*"],
 			"public/*": ["public/*"],
 			"@components/*": ["src/components/*"],
-			"$lib/*": ["src/lib/*"],
+			"$lib/*": [
+				"src/lib/*"
+			]
 		},
 		"includes": ["**/*.js", "**/*.ts", "**/*.svelte"],
 		"extends": "./.svelte-kit/tsconfig.json",
