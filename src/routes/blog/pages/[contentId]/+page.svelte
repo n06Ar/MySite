@@ -33,7 +33,7 @@ export { article, description }
 
 <article>
 	{#if data.eyecatch}
-		<img class='w-full max-h-96' src={data.eyecatch?.url ?? "/images/No_Image.png"}
+		<img class='w-full max-h-96 object-cover' src={data.eyecatch?.url ?? "/images/No_Image.png"}
 			 alt='{data.title}' />
 	{/if}
 
