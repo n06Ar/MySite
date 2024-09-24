@@ -60,92 +60,163 @@ export { article, description }
 	@import 'highlight.js/styles/tokyo-night-dark.min.css';
 
 	.content {
+		font-size: 16px;
+
 		:global(h1) {
-			@apply text-4xl my-4;
+			font-size: 2rem;
+			line-height: 2.5rem;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			padding-bottom: 0.5rem;
+			border-bottom-width: 1px;
 
 			&::before {
 				content: "#";
-			}
+				margin-right: 0.25rem;
+				--tw-text-opacity: 1;
+				color: rgb(74 89 137 / var(--tw-text-opacity));
 
-			&::before {
-				@apply text-primary-800 dark:text-primary-500 mr-1
+				@media (prefers-color-scheme: dark) {
+					--tw-text-opacity: 1;
+					color: rgb(131 157 209 / var(--tw-text-opacity));
+				}
 			}
 		}
 
 		:global(h2) {
-			@apply text-3xl my-3;
+			font-size: 1.875rem;
+			line-height: 2.25rem;
+			margin-top: 0.75rem;
+			margin-bottom: 0.75rem;
 
 			&::before {
 				content: "##";
-			}
+				margin-right: 0.25rem;
+				--tw-text-opacity: 1;
+				color: rgb(74 89 137 / var(--tw-text-opacity));
 
-			&::before {
-				@apply text-primary-800 dark:text-primary-500 mr-1
+				@media (prefers-color-scheme: dark) {
+					--tw-text-opacity: 1;
+					color: rgb(131 157 209 / var(--tw-text-opacity));
+				}
 			}
 		}
 
 		:global(h3) {
-			@apply text-2xl my-2;
+			font-size: 1.5rem;
+			line-height: 2rem;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
 
 			&::before {
 				content: "###";
-			}
+				margin-right: 0.25rem;
+				--tw-text-opacity: 1;
+				color: rgb(74 89 137 / var(--tw-text-opacity));
 
-			&::before {
-				@apply text-primary-800 dark:text-primary-500 mr-1
+				@media (prefers-color-scheme: dark) {
+					--tw-text-opacity: 1;
+					color: rgb(131 157 209 / var(--tw-text-opacity));
+				}
 			}
 		}
 
 		:global(h4) {
-			@apply text-xl my-2;
+			font-size: 1.25rem;
+			line-height: 1.75rem;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
 
 			&::before {
 				content: "####";
-			}
+				margin-right: 0.25rem;
+				--tw-text-opacity: 1;
+				color: rgb(74 89 137 / var(--tw-text-opacity));
 
-			&::before {
-				@apply text-primary-800 dark:text-primary-500 mr-1
+				@media (prefers-color-scheme: dark) {
+					--tw-text-opacity: 1;
+					color: rgb(131 157 209 / var(--tw-text-opacity));
+				}
 			}
 		}
 
 		:global(h5) {
-			@apply text-lg my-2;
+			font-size: 1.125rem;
+			line-height: 1.75rem;
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
 
 			&::before {
 				content: "#####";
-			}
+				margin-right: 0.25rem;
+				--tw-text-opacity: 1;
+				color: rgb(74 89 137 / var(--tw-text-opacity));
 
-			&::before {
-				@apply text-primary-800 dark:text-primary-500 mr-1
+				@media (prefers-color-scheme: dark) {
+					--tw-text-opacity: 1;
+					color: rgb(131 157 209 / var(--tw-text-opacity));
+				}
 			}
 		}
 
 		:global(a) {
-			@apply hover:underline text-primary-600 dark:text-primary-500;
+			--tw-text-opacity: 1;
+			color: rgb(106 127 193 / var(--tw-text-opacity));
+
+			&:hover {
+				text-decoration-line: underline;
+			}
+
+			@media (prefers-color-scheme: dark) {
+				--tw-text-opacity: 1;
+				color: rgb(131 157 209 / var(--tw-text-opacity));
+			}
 		}
 
 		:global(blockquote) {
-			@apply p-4 pr-0 mt-1 mb-1 border-l-2 border-primary-400;
+			padding: 1rem 0 1rem 1rem;
+			margin-top: 0.25rem;
+			border-left-width: 2px;
+			--tw-border-opacity: 1;
+			border-color: rgb(156 182 221 / var(--tw-border-opacity));
 		}
 
 		:global(code) {
-			@apply px-2 py-1 rounded-md text-primary-50 bg-primary-950;
+			padding: 0.25rem 0.5rem;
+			border-radius: 0.375rem;
+			--tw-text-opacity: 1;
+			color: rgb(242 247 251 / var(--tw-text-opacity));
+			--tw-bg-opacity: 1;
+			background-color: rgb(38 44 64 / var(--tw-bg-opacity));
 		}
 
 		:global(pre) {
-			@apply my-4 w-full border-8 border-primary-950 rounded-md bg-primary-950;
+			width: 100%;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			border-width: 8px;
+			--tw-border-opacity: 1;
+			border-color: rgb(38 44 64 / var(--tw-border-opacity));
+			border-radius: 0.375rem;
+			--tw-bg-opacity: 1;
+			background-color: rgb(38 44 64 / var(--tw-bg-opacity));
 
 			:global(code) {
-				@apply my-1 mx-3 text-primary-50 bg-inherit;
+				margin: 0.25rem 0.75rem;
+				--tw-text-opacity: 1;
+				color: rgb(242 247 251 / var(--tw-text-opacity));
+				background-color: inherit;
 			}
 		}
 
 		:global(ul) {
-			@apply pl-5 list-disc
+			padding-left: 1.25rem;
+			list-style-type: disc;
 		}
 
 		:global(ol) {
-			@apply pl-6 list-decimal
+			padding-left: 1.5rem;
+			list-style-type: decimal;
 		}
 	}
 </style>
