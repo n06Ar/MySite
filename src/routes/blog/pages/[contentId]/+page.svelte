@@ -63,16 +63,15 @@ export { article, description }
 		font-size: 16px;
 
 		:global(h1) {
-			font-size: 2rem;
-			line-height: 2.5rem;
-			margin-top: 1rem;
-			margin-bottom: 1rem;
-			padding-bottom: 0.5rem;
+			font-size: 2em;
+			line-height: 2.5em;
+			margin-top: .75em;
+			margin-bottom: .5em;
 			border-bottom-width: 1px;
 
 			&::before {
 				content: "#";
-				margin-right: 0.25rem;
+				margin-right: 0.25em;
 				--tw-text-opacity: 1;
 				color: rgb(74 89 137 / var(--tw-text-opacity));
 
@@ -84,14 +83,14 @@ export { article, description }
 		}
 
 		:global(h2) {
-			font-size: 1.875rem;
-			line-height: 2.25rem;
-			margin-top: 0.75rem;
-			margin-bottom: 0.75rem;
+			font-size: 1.875em;
+			line-height: 2.25em;
+			margin-top: .75em;
+			margin-bottom: .5em;
 
 			&::before {
 				content: "##";
-				margin-right: 0.25rem;
+				margin-right: .25em;
 				--tw-text-opacity: 1;
 				color: rgb(74 89 137 / var(--tw-text-opacity));
 
@@ -103,14 +102,14 @@ export { article, description }
 		}
 
 		:global(h3) {
-			font-size: 1.5rem;
-			line-height: 2rem;
-			margin-top: 0.5rem;
-			margin-bottom: 0.5rem;
+			font-size: 1.5em;
+			line-height: 2em;
+			margin-top: .75em;
+			margin-bottom: .5em;
 
 			&::before {
 				content: "###";
-				margin-right: 0.25rem;
+				margin-right: .25em;
 				--tw-text-opacity: 1;
 				color: rgb(74 89 137 / var(--tw-text-opacity));
 
@@ -122,14 +121,14 @@ export { article, description }
 		}
 
 		:global(h4) {
-			font-size: 1.25rem;
-			line-height: 1.75rem;
-			margin-top: 0.5rem;
-			margin-bottom: 0.5rem;
+			font-size: 1.25em;
+			line-height: 1.75em;
+			margin-top: .75em;
+			margin-bottom: .5em;
 
 			&::before {
 				content: "####";
-				margin-right: 0.25rem;
+				margin-right: .25em;
 				--tw-text-opacity: 1;
 				color: rgb(74 89 137 / var(--tw-text-opacity));
 
@@ -141,14 +140,14 @@ export { article, description }
 		}
 
 		:global(h5) {
-			font-size: 1.125rem;
-			line-height: 1.75rem;
-			margin-top: 0.5rem;
-			margin-bottom: 0.5rem;
+			font-size: 1.125em;
+			line-height: 1.75em;
+			margin-top: .75em;
+			margin-bottom: .5em;
 
 			&::before {
 				content: "#####";
-				margin-right: 0.25rem;
+				margin-right: .25em;
 				--tw-text-opacity: 1;
 				color: rgb(74 89 137 / var(--tw-text-opacity));
 
@@ -157,6 +156,11 @@ export { article, description }
 					color: rgb(131 157 209 / var(--tw-text-opacity));
 				}
 			}
+		}
+
+		:global(p) {
+			margin: .5em auto 1em auto;
+			line-height: 1.75em;
 		}
 
 		:global(a) {
@@ -174,16 +178,16 @@ export { article, description }
 		}
 
 		:global(blockquote) {
-			padding: 1rem 0 1rem 1rem;
-			margin-top: 0.25rem;
+			padding: 1em 0 1em 1em;
+			margin-top: .25em;
 			border-left-width: 2px;
 			--tw-border-opacity: 1;
 			border-color: rgb(156 182 221 / var(--tw-border-opacity));
 		}
 
 		:global(code) {
-			padding: 0.25rem 0.5rem;
-			border-radius: 0.375rem;
+			padding: .25em .5em;
+			border-radius: .375em;
 			--tw-text-opacity: 1;
 			color: rgb(242 247 251 / var(--tw-text-opacity));
 			--tw-bg-opacity: 1;
@@ -192,17 +196,17 @@ export { article, description }
 
 		:global(pre) {
 			width: 100%;
-			margin-top: 1rem;
-			margin-bottom: 1rem;
+			margin-top: 1em;
+			margin-bottom: 1em;
 			border-width: 8px;
 			--tw-border-opacity: 1;
 			border-color: rgb(38 44 64 / var(--tw-border-opacity));
-			border-radius: 0.375rem;
+			border-radius: .375em;
 			--tw-bg-opacity: 1;
 			background-color: rgb(38 44 64 / var(--tw-bg-opacity));
 
 			:global(code) {
-				margin: 0.25rem 0.75rem;
+				margin: .25em .75em;
 				--tw-text-opacity: 1;
 				color: rgb(242 247 251 / var(--tw-text-opacity));
 				background-color: inherit;
@@ -210,12 +214,16 @@ export { article, description }
 		}
 
 		:global(ul) {
-			padding-left: 1.25rem;
+			padding-left: 1.25em;
 			list-style-type: disc;
 		}
 
+		:global(li) {
+			line-height: 1.75em;
+		}
+
 		:global(ol) {
-			padding-left: 1.5rem;
+			padding-left: 1.5em;
 			list-style-type: decimal;
 		}
 	}
