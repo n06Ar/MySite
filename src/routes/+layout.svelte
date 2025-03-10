@@ -1,7 +1,7 @@
 <script lang='ts'>
-	import '../app.css'
-	import Footer from '@components/common/Footer.svelte'
-	import Header from '@components/common/Header.svelte'
+import '../app.css'
+import Footer from '@components/common/Footer.svelte'
+import Header from '@components/common/Header.svelte'
 </script>
 
 <Header />
