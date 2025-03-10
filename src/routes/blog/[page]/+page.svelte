@@ -1,9 +1,9 @@
 <script lang='ts'>
-	import { Button, Heading } from 'flowbite-svelte'
-	import { ArrowRightOutline, BookSolid } from 'flowbite-svelte-icons'
-	import type { PageData } from './$types'
+import { Button, Heading } from 'flowbite-svelte'
+import { ArrowRightOutline, BookSolid } from 'flowbite-svelte-icons'
+import type { PageData } from './$types'
 
-	export let data: PageData
+export let data: PageData
 </script>
 
 <svelte:head>
