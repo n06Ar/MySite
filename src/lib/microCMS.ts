@@ -1,12 +1,12 @@
+import { MICROCMS_API_KEY, MICROCMS_SERVICE_DOMAIN } from '$env/static/private'
 /**
  * microCMSのブログデータを取得する処理
  */
 import {
-	createClient,
 	type MicroCMSQueries,
 	type MicroCMSImage,
+	createClient,
 } from 'microcms-js-sdk'
-import { MICROCMS_SERVICE_DOMAIN, MICROCMS_API_KEY } from '$env/static/private'
 
 const client = createClient({
 	serviceDomain: MICROCMS_SERVICE_DOMAIN,
