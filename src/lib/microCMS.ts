@@ -3,8 +3,8 @@ import { MICROCMS_API_KEY, MICROCMS_SERVICE_DOMAIN } from '$env/static/private'
  * microCMSのブログデータを取得する処理
  */
 import {
-	type MicroCMSQueries,
 	type MicroCMSImage,
+	type MicroCMSQueries,
 	createClient,
 } from 'microcms-js-sdk'
 
