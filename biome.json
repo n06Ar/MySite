@@ -9,16 +9,13 @@
 		"lineWidth": 80,
 		"attributePosition": "auto"
 	},
-	"organizeImports": { "enabled": true },
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": false,
 			"complexity": {
 				"noExtraBooleanCast": "error",
-				"noMultipleSpacesInRegularExpressionLiterals": "error",
-				"noUselessCatch": "error",
-				"noWith": "error"
+				"noUselessCatch": "error"
 			},
 			"correctness": {
 				"noConstAssign": "error",
@@ -27,7 +24,6 @@
 				"noEmptyPattern": "error",
 				"noGlobalObjectCalls": "error",
 				"noInvalidConstructorSuper": "error",
-				"noInvalidNewBuiltin": "error",
 				"noNonoctalDecimalEscape": "error",
 				"noPrecisionLoss": "error",
 				"noSelfAssign": "error",
@@ -67,20 +63,9 @@
 				"noRedeclare": "error",
 				"noShadowRestrictedNames": "error",
 				"noUnsafeNegation": "error",
-				"useGetterReturn": "error",
-				"useValidTypeof": "error"
+				"useGetterReturn": "error"
 			}
-		},
-		"ignore": [
-			"**/.DS_Store",
-			"**/node_modules",
-			"./build",
-			"./.svelte-kit",
-			"./package",
-			"**/.env",
-			"**/.env.*",
-			"**/bun.lockb"
-		]
+		}
 	},
 	"javascript": {
 		"formatter": {
