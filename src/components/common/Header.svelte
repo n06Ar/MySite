@@ -2,10 +2,10 @@
 import {
 	Heading,
 	NavBrand,
+	Navbar,
 	NavHamburger,
 	NavLi,
 	NavUl,
-	Navbar,
 } from 'flowbite-svelte'
 import {
 	BookSolid,
