@@ -31,7 +31,7 @@ import {
 				<WandMagicSparklesOutline class='inline-block' />
 				Playground
 			</NavLi>
-			<NavLi href='/blog/1'>
+			<NavLi href='/blog/pages'>
 				<BookSolid class='inline-block' />
 				Blog
 			</NavLi>
