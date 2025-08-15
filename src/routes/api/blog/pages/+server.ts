@@ -1,8 +1,10 @@
-import { json, error } from '@sveltejs/kit'
+import { error, json } from '@sveltejs/kit'
 import { getBlogPageList } from '$lib/microCMS'
 import type { RequestHandler } from './$types'
 
-export const GET: RequestHandler = async ({ url }) => {
+export const GET: ({ url }: { url: any }) => Promise<Response> = async ({
+	url,
+}) => {
 	try {
 		const pageParam = url.searchParams.get('page')
 		const page = pageParam ? Number(pageParam) : 1
