@@ -1,9 +1,13 @@
 import { error } from '@sveltejs/kit'
-import { getBlogPageList } from '$lib/microCMS'
+import { BlogResponse, getBlogPageList } from '$lib/microCMS'
 // @ts-ignore
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({
+export const load: ({
+	params,
+}: {
+	params: { page: string }
+}) => Promise<BlogResponse> = async ({
 	params,
 }: {
 	params: { page: string }
@@ -20,4 +24,3 @@ export const load: PageServerLoad = async ({
 		error(500, 'An unexpected error occurred')
 	}
 }
-
