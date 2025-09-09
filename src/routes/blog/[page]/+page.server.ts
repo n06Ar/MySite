@@ -14,9 +14,12 @@ export const load: ({
 }) => {
 	const queries: { offset: number; limit: number } = { offset: 0, limit: 50 }
 
-	if (params.page) {
-		queries.offset = (Number(params.page) - 1) * queries.limit
+	const pageNum = Number.parseInt(params.page, 10)
+	if (!Number.isFinite(pageNum) || Number.isNaN(pageNum) || pageNum < 1) {
+		error(404, 'Invalid page')
 	}
+
+	queries.offset = (pageNum - 1) * queries.limit
 	try {
 		return await getBlogPageList(queries)
 	} catch (e) {
