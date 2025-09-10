@@ -14,11 +14,10 @@ export const load: ({
 }) => {
 	const queries: { offset: number; limit: number } = { offset: 0, limit: 50 }
 
-	const pageNum = Number.parseInt(params.page, 10)
-	if (!Number.isFinite(pageNum) || Number.isNaN(pageNum) || pageNum < 1) {
-		error(404, 'Invalid page')
+	if (!/^[1-9]\d*$/.test(params.page)) {
+		throw error(404, 'Invalid page')
 	}
-
+	const pageNum = Number(params.page)
 	queries.offset = (pageNum - 1) * queries.limit
 	try {
 		return await getBlogPageList(queries)
