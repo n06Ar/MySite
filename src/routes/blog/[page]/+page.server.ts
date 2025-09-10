@@ -23,6 +23,6 @@ export const load: ({
 		return await getBlogPageList(queries)
 	} catch (e) {
 		console.error('Error fetching blog page list:', e)
-		error(500, 'An unexpected error occurred')
+		throw error(500, 'An unexpected error occurred')
 	}
 }
