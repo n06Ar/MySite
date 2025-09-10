@@ -1,13 +1,13 @@
 import { error } from '@sveltejs/kit'
-import { getBlogPageDetail } from '$lib/microCMS'
+import { Blog, getBlogPageDetail } from '$lib/microCMS'
 // @ts-ignore
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({
+export const load: ({
 	params,
 }: {
 	params: { contentId: string }
-}) => {
+}) => Promise<Blog> = async ({ params }: { params: { contentId: string } }) => {
 	try {
 		return await getBlogPageDetail(params.contentId)
 	} catch (e: unknown) {
@@ -18,5 +18,3 @@ export const load: PageServerLoad = async ({
 		error(status)
 	}
 }
-
-export const prerender = true

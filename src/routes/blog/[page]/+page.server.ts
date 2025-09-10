@@ -1,24 +1,28 @@
 import { error } from '@sveltejs/kit'
-import { getBlogPageList } from '$lib/microCMS'
+import { BlogResponse, getBlogPageList } from '$lib/microCMS'
 // @ts-ignore
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({
+export const load: ({
+	params,
+}: {
+	params: { page: string }
+}) => Promise<BlogResponse> = async ({
 	params,
 }: {
 	params: { page: string }
 }) => {
 	const queries: { offset: number; limit: number } = { offset: 0, limit: 50 }
 
-	if (params.page) {
-		queries.offset = (Number(params.page) - 1) * queries.limit
+	if (!/^[1-9]\d*$/.test(params.page)) {
+		throw error(404, 'Invalid page')
 	}
+	const pageNum = Number(params.page)
+	queries.offset = (pageNum - 1) * queries.limit
 	try {
 		return await getBlogPageList(queries)
 	} catch (e) {
 		console.error('Error fetching blog page list:', e)
-		error(500, 'An unexpected error occurred')
+		throw error(500, 'An unexpected error occurred')
 	}
 }
-
-export const prerender = true
