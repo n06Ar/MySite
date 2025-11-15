@@ -10,6 +10,7 @@ build/Release
 
 # Dependency directories
 node_modules/
+.pnpm-store/
 
 # TypeScript v1 declaration files
 typings/
@@ -30,6 +31,8 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
+# Build artifacts
+/build/
+
 # Svelte kit projects
 /.svelte-kit/
-
