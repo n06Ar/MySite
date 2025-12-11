@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit'
-import { Blog, getBlogPageDetail } from '$lib/microCMS'
+import { getBlogPageDetail } from '$lib/microCMS'
+import type { Blog } from '$lib/microCMS'
 // @ts-ignore
 import type { PageServerLoad } from './$types'
 
