@@ -47,9 +47,16 @@
 </svelte:head>
 
 <HeroSection
-	name="n06ar"
-	sublabel="Frontend-leaning Full-stack Engineer"
-	description="フロントとバックの両面から、プロダクトを前に進めるエンジニア。設計と実装のあいだをつなぎ、伝わるUIをつくります。"
+	name="のぶひと / NaoNao"
+	headline="Webエンジニア / Frontend-leaning Fullstack"
+	lead="のぶひとです。SvelteKit が好きなフロントエンドエンジニアです。"
+	description="フロントエンドを中心に、Webアプリケーションの設計・実装・改善をしています。個人開発や業務で得た知見、つまづきの記録をこのサイトにまとめています。"
+	tags={[
+		'SvelteKit / TypeScript',
+		'フロントエンド寄りフルスタック',
+		'パフォーマンス改善',
+		'DX 改善',
+	]}
 	ctas={[
 		{ label: 'Worksを見る', href: '#works', variant: 'primary' },
 		{ label: 'Blogを読む', href: '/blog/1', variant: 'ghost' },
