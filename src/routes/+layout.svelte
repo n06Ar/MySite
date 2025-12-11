@@ -1,13 +1,13 @@
-<script lang='ts'>
-import '../app.css'
-import Footer from '@components/common/Footer.svelte'
-import Header from '@components/common/Header.svelte'
+<script lang="ts">
+	import '../app.css'
+	import SiteFooter from '$lib/components/layout/SiteFooter.svelte'
+	import SiteHeader from '$lib/components/layout/SiteHeader.svelte'
 </script>
 
-<Header />
-<main class='bg-white dark:bg-gray-900 dark:text-primary-50'>
-	<div class='container mx-auto mb-12 sm:mb-4'>
+<div class="min-h-screen flex flex-col bg-[color:var(--bg)] text-[var(--text-strong)] transition-colors">
+	<SiteHeader />
+	<main class="flex-1">
 		<slot />
-	</div>
-</main>
-<Footer />
+	</main>
+	<SiteFooter />
+</div>
