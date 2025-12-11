@@ -47,9 +47,9 @@
 </svelte:head>
 
 <HeroSection
-	name="のぶひと / NaoNao"
+	name="n06ar / NaoNao"
 	headline="Webエンジニア / Frontend-leaning Fullstack"
-	lead="のぶひとです。SvelteKit が好きなフロントエンドエンジニアです。"
+	lead="n06arです。SvelteKit が好きなフロントエンドエンジニアです。"
 	description="フロントエンドを中心に、Webアプリケーションの設計・実装・改善をしています。個人開発や業務で得た知見、つまづきの記録をこのサイトにまとめています。"
 	tags={[
 		'SvelteKit / TypeScript',
