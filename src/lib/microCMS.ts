@@ -22,6 +22,10 @@ export type Blog = {
 	title: string
 	content: string
 	eyecatch?: MicroCMSImage
+	category?: {
+		id?: string
+		name: string
+	}
 }
 export type BlogResponse = {
 	totalCount: number

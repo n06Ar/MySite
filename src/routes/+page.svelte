@@ -1,135 +1,92 @@
-<script lang='ts'>
-import { A, Heading, Li, List, P } from 'flowbite-svelte'
-import { BookSolid, GithubSolid, XSolid } from 'flowbite-svelte-icons'
+<script lang="ts">
+import BlogCard from '$lib/components/BlogCard.svelte'
+import HeroSection from '$lib/components/HeroSection.svelte'
+import SectionHeading from '$lib/components/SectionHeading.svelte'
+import WorkCard from '$lib/components/WorkCard.svelte'
+import type { PageData } from './$types'
 
-const _SKILL_EXPERIENCES = {
-	languages: [
-		'Java',
-		'PHP',
-		'Objective-C',
-		'Swift',
-		'KotLin',
-		'JavaScript',
-		'HTML',
-		'CSS',
-	],
-	frameworks: [
-		'Spring',
-		'Ktor',
-		'CakePHP',
-		'Laravel',
-		'React',
-		'Next.js',
-		'Vue.js',
-		'Nuxt.js',
-		'Svelte',
-		'SvelteKit',
-		'Node.js',
-		'Express.js',
-		'bun',
-	],
-}
-
-const _PACKAGES = {
-	Svelte: 'https://svelte.dev/',
-	'Svelte Kit': 'https://kit.svelte.dev/',
-	Vite: 'https://vitejs.dev',
-	TypeScript: 'https://www.typescriptlang.org/',
-	Sass: 'https://sass-lang.com/',
-	tailwindcss: 'https://tailwindcss.com',
-	Flowbite: 'https://flowbite.com',
-	'Flowbite Svelte': 'https://flowbite-svelte.com/',
-}
+export let data: PageData
 </script>
 
 <svelte:head>
 	<title>NaoNao</title>
-	<meta name="description" content="N06's My Site." />
+	<meta name="description" content="n06ar のポートフォリオとブログがあるNaoNaoというWebサイトです" />
 </svelte:head>
 
-<div class='m-8 sm:m-auto sm:mt-8 flex flex-wrap'>
-	<section class='w-full md:w-1/4 pb-8 md:pb-0'>
-		<img
-			class='w-24 ml-auto mr-auto rounded-full'
-			src='https://avatars0.githubusercontent.com/u/56122838?s=460&u=223fe136c3c00e8150fe1967439ae3e7b5ca87d5&v=4'
-			alt="N06AR's profile icon"
-		/>
-	</section>
+<HeroSection
+	name="NaoNao"
+	headline="Webエンジニア / Frontend-leaning Fullstack"
+	lead="こんにちは、n06arです 👋"
+	descriptions={[
+		"ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです🙋",
+		"普段はフロントエンドを中心に、Webアプリケーションを作っています",
+		"試したことや悩んだこと、学んだことをこのサイトにまとめていきたいと思っています！"
+	]}
+	ctas={[
+		{ label: 'Worksを見る', href: '#works', variant: 'primary' },
+		{ label: 'Blogを読む', href: '/blog/1', variant: 'ghost' },
+		{ label: 'About', href: '#about', variant: 'ghost' },
+	]}
+/>
 
-	<div class='md:w-3/4 sm:w-full'>
-		<section class='mb-12'>
-			<Heading tag='h2' class='text-3xl'>
-				Hello!👋 My name is <A href='#Accounts'>N06AR</A>.
-			</Heading>
-			<P>I am a software engineer working in Japan. I work for a company and do front-end and back-end
-				development.</P>
-			<P>This web site will contain programs I developed and blog.</P>
-		</section>
-
-		<section class='mb-12'>
-			<Heading tag='h3' class='text-2xl'>Academic Backgrounds</Heading>
-			<List List='disc'>
-				<Li>Takushoku University, Engineering Department of Information Engineering</Li>
-				<Li>Takushoku University Graduate School, Graduate School of Engineering, Department of Information Design Engineering</Li>
-			</List>
-		</section>
-
-		<section class='mb-12 flex flex-wrap'>
-			<Heading tag='h3' class='w-full text-2xl'>Development Skills</Heading>
-			<div class='w-1/2'>
-				<Heading tag='h4' class='text-xl'>Programming & Markup Languages</Heading>
-				<List>
-					{#each _SKILL_EXPERIENCES.languages as language}
-						<Li>{language}</Li>
-					{/each}
-				</List>
-			</div>
-
-			<div class='w-1/2'>
-				<Heading tag='h4' class='text-xl'>Frameworks</Heading>
-				<List>
-					{#each _SKILL_EXPERIENCES.frameworks as framework}
-						<Li>{framework}</Li>
-					{/each}
-				</List>
-			</div>
-		</section>
-
-		<section class='mb-12'>
-			<Heading tag='h3' id='Accounts'>Accounts</Heading>
-			<List>
-				<Li>
-					<A href='https://twitter.com/N06Ar'>
-						<XSolid class='inLine-block' />
-						@N06AR
-					</A>
-				</Li>
-				<Li>
-					<A href='https://github.com/n06Ar'>
-						<GithubSolid class='inLine-block' />
-						@N06AR
-					</A>
-				</Li>
-				<Li>
-					<A href='https://n06ar.hatenablog.com/'>
-						<BookSolid class='inLine-block' />
-						@N06AR
-					</A>
-				</Li>
-			</List>
-
-		</section>
-
-		<section class='mb-12'>
-			<Heading tag='h2'>Package List</Heading>
-			<P>I used the following packages to create this site</P>
-			<List>
-				{#each Object.entries(_PACKAGES) as [name, url]}
-					<Li>
-						<A href='{url}'>{name}</A>
-					</Li>
-				{/each}
-			</List>
-		</section>
+<section id="works" class="section-shell section-space space-y-8">
+	<SectionHeading label="Featured Works" eyebrow="Works" />
+	<div
+		class="rounded-xl border border-dashed border-gray-300 bg-gray-50
+         p-8 text-center
+         dark:border-gray-700 dark:bg-gray-900"
+	>
+		<p class="mb-2 text-lg font-medium">
+			Coming Soon ☕️
+		</p>
+		<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+			まだ何も置いていません...<br />
+			そのうち、個人開発や取り組んだことをここにまとめていく予定です！
+		</p>
 	</div>
-</div>
+</section>
+
+<section class="section-shell section-space space-y-8 bg-transparent">
+	<SectionHeading
+		label="Latest Posts"
+		eyebrow="Blog"
+		actionHref="/blog/1"
+		actionLabel="すべて見る"
+	/>
+	{#if data.latestPosts?.contents?.length}
+		<div class="grid gap-6 md:grid-cols-3">
+			{#each data.latestPosts.contents as post (post.id)}
+				<BlogCard blog={post} />
+			{/each}
+		</div>
+	{:else}
+		<p class="text-muted">まだ投稿がありません</p>
+	{/if}
+</section>
+
+<section id="about" class="section-shell section-space space-y-6">
+	<SectionHeading label="About me" eyebrow="Profile" />
+	<div class="card p-6 md:p-8 space-y-4">
+		<p class="text-muted leading-relaxed">
+			東京で働いているフロント寄りフルスタックエンジニアです！仕事では、フロントエンドを中心に開発をしていますが、バックエンドやインフラの設計や開発もします！
+		</p>
+		<div class="grid gap-4 md:grid-cols-2">
+			<div>
+				<p class="text-xs font-semibold text-brand-500 uppercase tracking-wide mb-2">最近触っている技術</p>
+				<ul class="text-sm text-muted space-y-1 list-disc pl-5">
+					<li>Next.js / Nuxt / SvelteKit / React / Vue / Svelte / TypeScript / Tailwind CSS</li>
+					<li>Node.js (REST / GraphQL) / PHP (Laravel, CakePHP) / Spring Boot</li>
+					<li>AWS / GitHub Actions / GitHub Pages / Vercel / Heroku</li>
+				</ul>
+			</div>
+			<div>
+				<p class="text-xs font-semibold text-brand-500 uppercase tracking-wide mb-2">リンク</p>
+				<ul class="text-sm text-muted space-y-1 list-disc pl-5">
+					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="https://github.com/n06Ar">GitHub</a></li>
+					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="https://twitter.com/N06Ar">X (Twitter)</a></li>
+					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="/blog/1">Blog</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

@@ -35,4 +35,6 @@ typings/
 /build/
 
 # Svelte kit projects
-/.svelte-kit/
+.svelte-kit/
+
+.vercel/
