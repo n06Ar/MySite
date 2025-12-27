@@ -1,9 +1,9 @@
 <script lang="ts">
-	import BlogCard from '$lib/components/BlogCard.svelte'
-	import SectionHeading from '$lib/components/SectionHeading.svelte'
-	import type { PageData } from './$types'
+import BlogCard from '$lib/components/BlogCard.svelte'
+import SectionHeading from '$lib/components/SectionHeading.svelte'
+import type { PageData } from './$types'
 
-	export let data: PageData
+export let data: PageData
 </script>
 
 <svelte:head>

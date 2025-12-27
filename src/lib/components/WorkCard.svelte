@@ -1,11 +1,11 @@
 <script lang="ts">
-	type WorkLink = { label: string; href: string }
+type WorkLink = { label: string; href: string }
 
-	export let title: string
-	export let description: string
-	export let tags: string[] = []
-	export let links: WorkLink[] = []
-	export let status: 'wip' | 'released' = 'wip'
+export let title: string
+export let description: string
+export let tags: string[] = []
+export let links: WorkLink[] = []
+export let status: 'wip' | 'released' = 'wip'
 </script>
 
 <article class="card p-6 h-full flex flex-col gap-4">

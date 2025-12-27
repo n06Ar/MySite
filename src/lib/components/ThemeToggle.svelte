@@ -1,26 +1,26 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+import { onMount } from 'svelte'
 
-	type Theme = 'light' | 'dark'
+type Theme = 'light' | 'dark'
 
-	let theme: Theme = 'light'
+let theme: Theme = 'light'
 
-	const applyTheme = (next: Theme) => {
-		theme = next
-		const root = document.documentElement
-		root.classList.toggle('dark', next === 'dark')
-		localStorage.setItem('theme', next)
+const applyTheme = (next: Theme) => {
+	theme = next
+	const root = document.documentElement
+	root.classList.toggle('dark', next === 'dark')
+	localStorage.setItem('theme', next)
+}
+
+onMount(() => {
+	const stored = localStorage.getItem('theme')
+	const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+	if (stored === 'dark' || (!stored && prefersDark)) {
+		applyTheme('dark')
+	} else {
+		applyTheme('light')
 	}
-
-	onMount(() => {
-		const stored = localStorage.getItem('theme')
-		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-		if (stored === 'dark' || (!stored && prefersDark)) {
-			applyTheme('dark')
-		} else {
-			applyTheme('light')
-		}
-	})
+})
 </script>
 
 <button

@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { Blog } from '$lib/microCMS'
+import type { Blog } from '$lib/microCMS'
 
-	export let blog: Blog
+export let blog: Blog
 
-	const formatDate = (value: string) =>
-		new Date(value).toLocaleDateString('ja-JP', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
+const formatDate = (value: string) =>
+	new Date(value).toLocaleDateString('ja-JP', {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+	})
 </script>
 
 <a href={`/blog/pages/${blog.id}`} class="card overflow-hidden flex flex-col h-full bg-[var(--card)]">

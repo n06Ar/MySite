@@ -1,8 +1,8 @@
 <script lang="ts">
-	export let label: string
-	export let eyebrow: string | null = null
-	export let actionHref: string | null = null
-	export let actionLabel: string | null = null
+export let label: string
+export let eyebrow: string | null = null
+export let actionHref: string | null = null
+export let actionLabel: string | null = null
 </script>
 
 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
