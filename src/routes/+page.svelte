@@ -66,10 +66,19 @@ const works: WorkItem[] = [
 
 <section id="works" class="section-shell section-space space-y-8">
 	<SectionHeading label="Featured Works" eyebrow="Works" />
-	<div class="grid gap-6 md:grid-cols-2">
-		{#each works as work (work.title)}
-			<WorkCard {...work} />
-		{/each}
+	<div
+		class="rounded-xl border border-dashed border-gray-300 bg-gray-50
+         p-8 text-center
+         dark:border-gray-700 dark:bg-gray-900"
+	>
+		<p class="mb-2 text-lg font-medium">
+			Coming Soon ☕️
+		</p>
+		<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+			まだ何も置いていません<br />
+			そのうち、個人開発や取り組んだことを<br />
+			ここにまとめていく予定です。
+		</p>
 	</div>
 </section>
 
