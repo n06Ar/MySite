@@ -1,44 +1,47 @@
 <script lang="ts">
-	import BlogCard from '$lib/components/BlogCard.svelte'
-	import HeroSection from '$lib/components/HeroSection.svelte'
-	import SectionHeading from '$lib/components/SectionHeading.svelte'
-	import WorkCard from '$lib/components/WorkCard.svelte'
-	import type { PageData } from './$types'
+import BlogCard from '$lib/components/BlogCard.svelte'
+import HeroSection from '$lib/components/HeroSection.svelte'
+import SectionHeading from '$lib/components/SectionHeading.svelte'
+import WorkCard from '$lib/components/WorkCard.svelte'
+import type { PageData } from './$types'
 
-	export let data: PageData
+export let data: PageData
 
-	type WorkLink = { label: string; href: string }
-	type WorkItem = {
-		title: string
-		description: string
-		tags: string[]
-		status: 'wip' | 'released'
-		links: WorkLink[]
-	}
+type WorkLink = { label: string; href: string }
+type WorkItem = {
+	title: string
+	description: string
+	tags: string[]
+	status: 'wip' | 'released'
+	links: WorkLink[]
+}
 
-	const works: WorkItem[] = [
-		{
-			title: 'リニューアル中',
-			description: 'SvelteKit + Tailwind でUIとUXを再設計中。公開準備ができ次第リンクを追加予定。',
-			tags: ['SvelteKit', 'Tailwind CSS', 'Design System'],
-			status: 'wip',
-			links: [] as { label: string; href: string }[],
-		},
-		{
-			title: 'API Playgrounds',
-			description: 'バックエンド実験用の小さな playground を整備。GraphQL と REST の比較検証を実施中。',
-			tags: ['Node.js', 'GraphQL', 'REST'],
-			status: 'wip',
-			links: [],
-		},
-		{
-			title: 'UI Component Kit',
-			description: 'ポートフォリオ共通の UI コンポーネントを整理し、アクセシビリティを強化予定。',
-			tags: ['Accessibility', 'Storybook', 'Testing'],
-			status: 'wip',
-			links: [],
-		},
-	]
+const works: WorkItem[] = [
+	{
+		title: 'リニューアル中',
+		description:
+			'SvelteKit + Tailwind でUIとUXを再設計中。公開準備ができ次第リンクを追加予定。',
+		tags: ['SvelteKit', 'Tailwind CSS', 'Design System'],
+		status: 'wip',
+		links: [] as { label: string; href: string }[],
+	},
+	{
+		title: 'API Playgrounds',
+		description:
+			'バックエンド実験用の小さな playground を整備。GraphQL と REST の比較検証を実施中。',
+		tags: ['Node.js', 'GraphQL', 'REST'],
+		status: 'wip',
+		links: [],
+	},
+	{
+		title: 'UI Component Kit',
+		description:
+			'ポートフォリオ共通の UI コンポーネントを整理し、アクセシビリティを強化予定。',
+		tags: ['Accessibility', 'Storybook', 'Testing'],
+		status: 'wip',
+		links: [],
+	},
+]
 </script>
 
 <svelte:head>
@@ -50,12 +53,9 @@
 	name="n06ar"
 	headline="Webエンジニア / Frontend-leaning Fullstack"
 	lead="こんにちは、n06arです 👋"
-	description="フロントエンドを中心に、Webアプリケーションを作っています。試したことや悩んだこと、学んだことをこのNaoNAoというサイトにまとめています。"
-	tags={[
-		'SvelteKit / TypeScript',
-		'フロントエンド寄りフルスタック',
-		'パフォーマンス改善',
-		'DX 改善',
+	descriptions={[
+		"フロントエンドを中心に、Webアプリケーションを作っています。",
+		"試したことや悩んだこと、学んだことをこのサイトにまとめています。"
 	]}
 	ctas={[
 		{ label: 'Worksを見る', href: '#works', variant: 'primary' },

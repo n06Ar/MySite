@@ -1,25 +1,26 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte'
+import { onMount } from 'svelte'
+import ThemeToggle from '$lib/components/ThemeToggle.svelte'
 
-	const navLinks = [
-		{ label: 'Home', href: '/' },
-		{ label: 'Works', href: '#works' },
-		{ label: 'Blog', href: '/blog/1' },
-		{ label: 'About', href: '#about' },
-	]
+const navLinks = [
+	{ label: 'Home', href: '/' },
+	{ label: 'Works', href: '/#works' },
+	{ label: 'Blog', href: '/blog/1' },
+	{ label: 'About', href: '/#about' },
+]
 
-	let isOpen = false
+let isOpen: boolean
+isOpen = false
 
-	const close = () => {
-		isOpen = false
-	}
+const close = () => {
+	isOpen = false
+}
 
-	onMount(() => {
-		const onScroll = () => (isOpen = false)
-		window.addEventListener('scroll', onScroll)
-		return () => window.removeEventListener('scroll', onScroll)
-	})
+onMount(() => {
+	const onScroll = () => (isOpen = false)
+	window.addEventListener('scroll', onScroll)
+	return () => window.removeEventListener('scroll', onScroll)
+})
 </script>
 
 <header class="sticky top-0 z-30 border-b border-black/5 dark:border-white/10 backdrop-blur bg-[color:var(--bg)]">
