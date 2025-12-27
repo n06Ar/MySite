@@ -7,7 +7,7 @@ export let data: PageData
 </script>
 
 <svelte:head>
-	<title>Blog | n06ar</title>
+	<title>Blog | NaoNao</title>
 	<meta name="description" content="n06ar のブログ一覧" />
 </svelte:head>
 
