@@ -41,6 +41,19 @@ const sanitizeOptions: sanitizeHtml.IOptions = {
 	allowedSchemesByTag: {
 		img: ['http', 'https'],
 	},
+	transformTags: {
+		a: (tagName: any, attribs: { target: string; rel: string }) => {
+			if (attribs.target === '_blank') {
+				const existingRel = (attribs.rel ?? '').split(/\s+/).filter(Boolean)
+				const relSet = new Set(existingRel)
+				relSet.add('noopener')
+				relSet.add('noreferrer')
+				attribs.rel = Array.from(relSet).join(' ')
+			}
+
+			return { tagName, attribs }
+		},
+	},
 }
 
 export const load: ({
