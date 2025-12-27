@@ -1,34 +1,34 @@
 <script lang="ts">
-	import { load } from 'cheerio'
-	import highlight from 'highlight.js'
-	import type { PageData } from './$types'
+import { load } from 'cheerio'
+import highlight from 'highlight.js'
+import type { PageData } from './$types'
 
-	export let data: PageData
+export let data: PageData
 
-	let article = ''
-	let description = ''
+let article = ''
+let description = ''
 
-	if (data.content) {
-		const cheeArticle = load(data.content)
-		cheeArticle('pre code').each((_, elm) => {
-			const result = highlight.highlightAuto(cheeArticle(elm).text())
-			cheeArticle(elm).html(result.value)
-			cheeArticle(elm).addClass('hljs')
-		})
-		article = cheeArticle.html()
+if (data.content) {
+	const cheeArticle = load(data.content)
+	cheeArticle('pre code').each((_, elm) => {
+		const result = highlight.highlightAuto(cheeArticle(elm).text())
+		cheeArticle(elm).html(result.value)
+		cheeArticle(elm).addClass('hljs')
+	})
+	article = cheeArticle.html()
 
-		const cheeDescription = load(data.content)
-		description = cheeDescription('*').text().substring(0, 120)
-	}
+	const cheeDescription = load(data.content)
+	description = cheeDescription('*').text().substring(0, 120)
+}
 
-	const formatDate = (value: string) =>
-		new Date(value).toLocaleDateString('ja-JP', {
-			year: 'numeric',
-			month: 'short',
-			day: 'numeric',
-		})
+const formatDate = (value: string) =>
+	new Date(value).toLocaleDateString('ja-JP', {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+	})
 
-	export { article, description }
+export { article, description }
 </script>
 
 <svelte:head>
