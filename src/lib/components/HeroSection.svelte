@@ -2,9 +2,13 @@
 type Cta = { label: string; href: string; variant?: 'primary' | 'ghost' }
 
 export let headline = 'Webエンジニア / Frontend-leaning Fullstack'
-export let name = 'n06ar'
-export let lead = 'n06arです。SvelteKit が好きなフロントエンドエンジニアです。'
-export let descriptions = ['']
+export let name = 'NaoNao'
+export let lead = 'こんにちは、n06arです 👋'
+export let descriptions = [
+	'ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです🙋',
+	'普段はフロントエンドを中心に、Webアプリケーションを作っています',
+	'試したことや悩んだこと、学んだことをこのサイトにまとめていきたいと思っています！',
+]
 export let tags: string[] = []
 export let ctas: Cta[] = []
 </script>
