@@ -79,5 +79,17 @@
 			"quoteStyle": "single",
 			"attributePosition": "auto"
 		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true,
+			"cssModules": true
+		},
+		"formatter": {
+			"enabled": true
+		},
+		"linter": {
+			"enabled": true
+		}
 	}
 }

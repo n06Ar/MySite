@@ -1,4 +1,4 @@
-@import 'highlight.js/styles/tokyo-night-dark.min.css';
+@import "highlight.js/styles/tokyo-night-dark.min.css";
 
 @tailwind base;
 @tailwind components;
@@ -30,8 +30,11 @@ body {
 	min-height: 100vh;
 	background-color: var(--bg);
 	color: var(--text-strong);
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-	transition: background-color 0.2s ease, color 0.2s ease;
+	font-family:
+		system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease;
 }
 
 a {
@@ -56,7 +59,10 @@ a:hover {
 	border: 1px solid rgba(0, 0, 0, 0.04);
 	border-radius: 1rem;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-	transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+	transition:
+		transform 150ms ease,
+		box-shadow 150ms ease,
+		border-color 150ms ease;
 }
 
 .dark .card {
@@ -96,8 +102,6 @@ a:hover {
 
 .prose-content :global(code) {
 	background: rgba(99, 102, 241, 0.08);
-	padding: 0.15rem 0.35rem;
-	border-radius: 0.45rem;
 }
 
 .dark .prose-content :global(code) {
