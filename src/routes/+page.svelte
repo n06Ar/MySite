@@ -45,16 +45,17 @@ const works: WorkItem[] = [
 </script>
 
 <svelte:head>
-	<title>n06ar | Portfolio</title>
-	<meta name="description" content="フルスタックエンジニア n06ar のポートフォリオとブログ。" />
+	<title>NaoNao</title>
+	<meta name="description" content="n06ar のポートフォリオとブログです。" />
 </svelte:head>
 
 <HeroSection
-	name="n06ar"
+	name="NaoNao"
 	headline="Webエンジニア / Frontend-leaning Fullstack"
 	lead="こんにちは、n06arです 👋"
 	descriptions={[
-		"フロントエンドを中心に、Webアプリケーションを作っています。",
+		"ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです。",
+		"普段はフロントエンドを中心に、Webアプリケーションを作っています。",
 		"試したことや悩んだこと、学んだことをこのサイトにまとめています。"
 	]}
 	ctas={[
