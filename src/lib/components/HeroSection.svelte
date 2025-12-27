@@ -1,13 +1,12 @@
 <script lang="ts">
-	type Cta = { label: string; href: string; variant?: 'primary' | 'ghost' }
+type Cta = { label: string; href: string; variant?: 'primary' | 'ghost' }
 
-	export let headline = 'Webエンジニア / Frontend-leaning Fullstack'
-	export let name = 'n06ar'
-	export let lead = 'n06arです。SvelteKit が好きなフロントエンドエンジニアです。'
-	export let description =
-		'フロントエンドを中心に、Webアプリケーションの設計・実装・改善をしています。個人開発や業務で得た知見、つまづきの記録をこのサイトにまとめています。'
-	export let tags: string[] = []
-	export let ctas: Cta[] = []
+export let headline = 'Webエンジニア / Frontend-leaning Fullstack'
+export let name = 'n06ar'
+export let lead = 'n06arです。SvelteKit が好きなフロントエンドエンジニアです。'
+export let descriptions = ['']
+export let tags: string[] = []
+export let ctas: Cta[] = []
 </script>
 
 <section class="section-shell section-space flex flex-col gap-6">
@@ -15,7 +14,13 @@
 		<p class="text-sm font-semibold text-brand-600 dark:text-brand-200">{headline}</p>
 		<h1 class="text-4xl md:text-5xl font-black leading-tight">{name}</h1>
 		<p class="text-lg text-muted">{lead}</p>
-		<p class="text-base text-muted max-w-3xl leading-relaxed">{description}</p>
+		{#if descriptions.length}
+			<div>
+			{#each descriptions as description}
+				<p class="text-base text-muted max-w-3xl leading-relaxed">{description}</p>
+			{/each}
+			</div>
+		{/if}
 	</div>
 
 	{#if tags.length}
