@@ -33,7 +33,7 @@ export { article, description }
 </script>
 
 <svelte:head>
-	<title>{data.title} | n06ar Blog</title>
+	<title>{data.title} | NaoNao Blog</title>
 	<meta name="description" content={description} />
 </svelte:head>
 
