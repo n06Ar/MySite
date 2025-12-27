@@ -10,7 +10,7 @@ export let data: PageData
 
 <svelte:head>
 	<title>NaoNao</title>
-	<meta name="description" content="n06ar のポートフォリオとブログです。" />
+	<meta name="description" content="n06ar のポートフォリオとブログがあるNaoNaoというWebサイトです" />
 </svelte:head>
 
 <HeroSection
@@ -18,9 +18,9 @@ export let data: PageData
 	headline="Webエンジニア / Frontend-leaning Fullstack"
 	lead="こんにちは、n06arです 👋"
 	descriptions={[
-		"ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです。",
-		"普段はフロントエンドを中心に、Webアプリケーションを作っています。",
-		"試したことや悩んだこと、学んだことをこのサイトにまとめています。"
+		"ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです🙋",
+		"普段はフロントエンドを中心に、Webアプリケーションを作っています",
+		"試したことや悩んだこと、学んだことをこのサイトにまとめていきたいと思っています！"
 	]}
 	ctas={[
 		{ label: 'Worksを見る', href: '#works', variant: 'primary' },
@@ -40,9 +40,8 @@ export let data: PageData
 			Coming Soon ☕️
 		</p>
 		<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-			まだ何も置いていません<br />
-			そのうち、個人開発や取り組んだことを<br />
-			ここにまとめていく予定です。
+			まだ何も置いていません...<br />
+			そのうち、個人開発や取り組んだことをここにまとめていく予定です！
 		</p>
 	</div>
 </section>
@@ -61,7 +60,7 @@ export let data: PageData
 			{/each}
 		</div>
 	{:else}
-		<p class="text-muted">まだ投稿がありません。</p>
+		<p class="text-muted">まだ投稿がありません</p>
 	{/if}
 </section>
 
@@ -69,7 +68,7 @@ export let data: PageData
 	<SectionHeading label="About me" eyebrow="Profile" />
 	<div class="card p-6 md:p-8 space-y-4">
 		<p class="text-muted leading-relaxed">
-			東京で働いているフロント寄りフルスタックエンジニアです！仕事では、フロントエンドを中心に開発をしていますが、バックエンドやインフラの設計や開発経験があります
+			東京で働いているフロント寄りフルスタックエンジニアです！仕事では、フロントエンドを中心に開発をしていますが、バックエンドやインフラの設計や開発もします！
 		</p>
 		<div class="grid gap-4 md:grid-cols-2">
 			<div>
