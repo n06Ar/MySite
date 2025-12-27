@@ -69,24 +69,23 @@ export let data: PageData
 	<SectionHeading label="About me" eyebrow="Profile" />
 	<div class="card p-6 md:p-8 space-y-4">
 		<p class="text-muted leading-relaxed">
-			東京拠点のフロントエンド寄りフルスタックエンジニア。Web アプリの設計・開発からクラウド運用まで幅広く担当しています。
-			React / Svelte / Node.js / PHP を中心に、UI/UX とパフォーマンスの両立を意識した開発が得意です。
+			東京で働いているフロント寄りフルスタックエンジニアです！仕事では、フロントエンドを中心に開発をしていますが、バックエンドやインフラの設計や開発経験があります
 		</p>
 		<div class="grid gap-4 md:grid-cols-2">
 			<div>
 				<p class="text-xs font-semibold text-brand-500 uppercase tracking-wide mb-2">最近触っている技術</p>
-				<ul class="text-sm text-muted space-y-1">
-					<li>・SvelteKit, Vite, Tailwind CSS</li>
-					<li>・Node.js (REST / GraphQL)</li>
-					<li>・AWS / Cloudflare</li>
+				<ul class="text-sm text-muted space-y-1 list-disc pl-5">
+					<li>Next.js / Nuxt / SvelteKit / React / Vue / Svelte / TypeScript / Tailwind CSS</li>
+					<li>Node.js (REST / GraphQL) / PHP (Laravel, CakePHP) / Spring Boot</li>
+					<li>AWS / GitHub Actions / GitHub Pages / Vercel / Heroku</li>
 				</ul>
 			</div>
 			<div>
 				<p class="text-xs font-semibold text-brand-500 uppercase tracking-wide mb-2">リンク</p>
-				<ul class="text-sm text-muted space-y-1">
-					<li><a class="hover:text-brand-600 dark:hover:text-brand-200" href="https://github.com/n06Ar">GitHub</a></li>
-					<li><a class="hover:text-brand-600 dark:hover:text-brand-200" href="https://twitter.com/N06Ar">X (Twitter)</a></li>
-					<li><a class="hover:text-brand-600 dark:hover:text-brand-200" href="/blog/1">Blog</a></li>
+				<ul class="text-sm text-muted space-y-1 list-disc pl-5">
+					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="https://github.com/n06Ar">GitHub</a></li>
+					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="https://twitter.com/N06Ar">X (Twitter)</a></li>
+					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="/blog/1">Blog</a></li>
 				</ul>
 			</div>
 		</div>
