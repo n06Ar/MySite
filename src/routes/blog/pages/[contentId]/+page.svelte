@@ -18,7 +18,8 @@ if (data.content) {
 	article = cheeArticle.html()
 
 	const cheeDescription = load(data.content)
-	description = cheeDescription('*').text().substring(0, 120)
+	const fullText = cheeDescription('*').text()
+	description = fullText.length > 120 ? fullText.slice(0, 120) + '…' : fullText
 }
 
 const formatDate = (value: string) =>
