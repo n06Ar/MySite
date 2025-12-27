@@ -14,7 +14,7 @@ const formatDate = (value: string) =>
 <a href={`/blog/pages/${blog.id}`} class="card overflow-hidden flex flex-col h-full bg-[var(--card)]">
 	<img
 		src={blog.eyecatch?.url ?? '/images/No_Image.png'}
-		alt={blog.eyecatch ? blog.title : 'No image'}
+		alt={blog.eyecatch ? blog.title : ''}
 		class="w-full aspect-[16/9] object-cover"
 		loading="lazy"
 	/>
