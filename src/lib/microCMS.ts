@@ -37,7 +37,13 @@ export type BlogResponse = {
 export const getBlogPageList = async (
 	queries?: MicroCMSQueries,
 ): Promise<BlogResponse> => {
-	return await client.get<BlogResponse>({ endpoint: 'blogs', queries })
+	return await client.get<BlogResponse>({
+		endpoint: 'blogs',
+		queries: {
+			...queries,
+			filters: 'publishedAt[exists]',
+		},
+	})
 }
 export const getBlogPageDetail = async (
 	contentId: string,
