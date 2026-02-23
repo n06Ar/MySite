@@ -15,8 +15,8 @@ export let ctas: Cta[] = []
 
 <section class="section-shell section-space flex flex-col gap-6">
 	<div class="space-y-4">
-		<p class="text-sm font-semibold text-brand-600 dark:text-brand-200">{headline}</p>
-		<h1 class="text-4xl md:text-5xl font-black leading-tight">{name}</h1>
+		<p class="text-sm font-normal tracking-widest uppercase text-brand-500 dark:text-brand-300">{headline}</p>
+		<h1 class="text-4xl md:text-5xl font-light leading-tight tracking-tight">{name}</h1>
 		<p class="text-lg text-muted">{lead}</p>
 		{#if descriptions.length}
 			<div>
@@ -41,14 +41,14 @@ export let ctas: Cta[] = []
 		{#each ctas as cta}
 			{#if cta.variant === 'ghost'}
 				<a
-					class="inline-flex items-center gap-2 rounded-full border border-brand-200 dark:border-brand-400 px-4 py-2 font-semibold text-brand-700 dark:text-brand-100 hover:bg-brand-50/70 dark:hover:bg-brand-900/30 transition"
+					class="inline-flex items-center gap-2 rounded border border-gray-300 dark:border-gray-600 px-4 py-2 font-normal text-sm text-gray-600 dark:text-gray-300 hover:border-brand-500 hover:text-brand-500 dark:hover:border-brand-400 dark:hover:text-brand-400 transition"
 					href={cta.href}
 				>
 					{cta.label}
 				</a>
 			{:else}
 				<a
-					class="inline-flex items-center gap-2 rounded-full bg-brand-500 text-white px-5 py-2.5 font-semibold shadow-md shadow-brand-500/30 hover:bg-brand-600 transition"
+					class="inline-flex items-center gap-2 rounded border border-brand-500 text-brand-500 dark:text-brand-400 dark:border-brand-400 px-5 py-2.5 font-normal text-sm hover:bg-brand-500 hover:text-white dark:hover:bg-brand-400 dark:hover:text-gray-900 transition"
 					href={cta.href}
 				>
 					{cta.label}

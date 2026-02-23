@@ -15,12 +15,11 @@ export let data: PageData
 
 <HeroSection
 	name="NaoNao"
-	headline="Webエンジニア / Frontend-leaning Fullstack"
-	lead="こんにちは、n06arです 👋"
+	headline="Frontend-leaning Fullstack Engineer"
+	lead="n06ar"
 	descriptions={[
-		"ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです🙋",
-		"普段はフロントエンドを中心に、Webアプリケーションを作っています",
-		"試したことや悩んだこと、学んだことをこのサイトにまとめていきたいと思っています！"
+		"東京を拠点に、フロントエンドを中心としたWebアプリケーション開発をしています。",
+		"試したこと、悩んだこと、学んだことをこのサイトにまとめています。"
 	]}
 	ctas={[
 		{ label: 'Worksを見る', href: '#works', variant: 'primary' },
@@ -72,7 +71,7 @@ export let data: PageData
 		</p>
 		<div class="grid gap-4 md:grid-cols-2">
 			<div>
-				<p class="text-xs font-semibold text-brand-500 uppercase tracking-wide mb-2">最近触っている技術</p>
+				<p class="text-xs font-medium text-brand-500 uppercase tracking-widest mb-2">Tech Stack</p>
 				<ul class="text-sm text-muted space-y-1 list-disc pl-5">
 					<li>Next.js / Nuxt / SvelteKit / React / Vue / Svelte / TypeScript / Tailwind CSS</li>
 					<li>Node.js (REST / GraphQL) / PHP (Laravel, CakePHP) / Spring Boot</li>
@@ -80,7 +79,7 @@ export let data: PageData
 				</ul>
 			</div>
 			<div>
-				<p class="text-xs font-semibold text-brand-500 uppercase tracking-wide mb-2">リンク</p>
+				<p class="text-xs font-medium text-brand-500 uppercase tracking-widest mb-2">Links</p>
 				<ul class="text-sm text-muted space-y-1 list-disc pl-5">
 					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="https://github.com/n06Ar">GitHub</a></li>
 					<li><a class="underline hover:text-brand-600 dark:hover:text-brand-200" href="https://twitter.com/N06Ar">X (Twitter)</a></li>

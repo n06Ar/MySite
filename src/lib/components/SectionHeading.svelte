@@ -8,13 +8,13 @@ export let actionLabel: string | null = null
 <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
 	<div>
 		{#if eyebrow}
-			<p class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-500 mb-1">{eyebrow}</p>
+			<p class="text-xs font-normal uppercase tracking-widest text-brand-500 mb-1">{eyebrow}</p>
 		{/if}
-		<h2 class="text-2xl md:text-3xl font-bold">{label}</h2>
+		<h2 class="text-2xl md:text-3xl font-light tracking-tight">{label}</h2>
 	</div>
 	{#if actionHref && actionLabel}
 		<a
-			class="inline-flex items-center gap-2 text-sm font-semibold text-brand-600 dark:text-brand-200 hover:text-brand-700 dark:hover:text-brand-100"
+			class="inline-flex items-center gap-2 text-sm font-normal text-brand-500 dark:text-brand-300 hover:text-brand-700 dark:hover:text-brand-100"
 			href={actionHref}
 		>
 			{actionLabel}
