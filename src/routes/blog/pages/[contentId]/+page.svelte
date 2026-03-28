@@ -3,24 +3,25 @@ import { load } from 'cheerio'
 import highlight from 'highlight.js'
 import type { PageData } from './$types'
 
-export let data: PageData
+let { data }: { data: PageData } = $props()
 
-let article = ''
-let description = ''
-
-if (data.content) {
+const article = $derived.by(() => {
+	if (!data.content) return ''
 	const cheeArticle = load(data.content)
 	cheeArticle('pre code').each((_, elm) => {
 		const result = highlight.highlightAuto(cheeArticle(elm).text())
 		cheeArticle(elm).html(result.value)
 		cheeArticle(elm).addClass('hljs')
 	})
-	article = cheeArticle.html()
+	return cheeArticle.html()
+})
 
+const description = $derived.by(() => {
+	if (!data.content) return ''
 	const cheeDescription = load(data.content)
 	const fullText = cheeDescription('*').text()
-	description = fullText.length > 120 ? fullText.slice(0, 120) + '…' : fullText
-}
+	return fullText.length > 120 ? fullText.slice(0, 120) + '…' : fullText
+})
 
 const formatDate = (value: string) =>
 	new Date(value).toLocaleDateString('ja-JP', {
@@ -29,7 +30,6 @@ const formatDate = (value: string) =>
 		day: 'numeric',
 	})
 
-export { article, description }
 </script>
 
 <svelte:head>

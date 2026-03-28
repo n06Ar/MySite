@@ -1,11 +1,13 @@
 <script lang="ts">
 type WorkLink = { label: string; href: string }
 
-export let title: string
-export let description: string
-export let tags: string[] = []
-export let links: WorkLink[] = []
-export let status: 'wip' | 'released' = 'wip'
+let { title, description, tags = [], links = [], status = 'wip' }: {
+	title: string
+	description: string
+	tags?: string[]
+	links?: WorkLink[]
+	status?: 'wip' | 'released'
+} = $props()
 </script>
 
 <article class="card p-6 h-full flex flex-col gap-4">
