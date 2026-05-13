@@ -29,7 +29,6 @@ const formatDate = (value: string) =>
 		month: 'short',
 		day: 'numeric',
 	})
-
 </script>
 
 <svelte:head>

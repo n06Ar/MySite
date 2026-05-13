@@ -1,5 +1,10 @@
 <script lang="ts">
-let { label, eyebrow = null, actionHref = null, actionLabel = null }: {
+let {
+	label,
+	eyebrow = null,
+	actionHref = null,
+	actionLabel = null,
+}: {
 	label: string
 	eyebrow?: string | null
 	actionHref?: string | null

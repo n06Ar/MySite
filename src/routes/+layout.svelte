@@ -1,8 +1,8 @@
 <script lang="ts">
 import '../app.css'
+import type { Snippet } from 'svelte'
 import SiteFooter from '$lib/components/layout/SiteFooter.svelte'
 import SiteHeader from '$lib/components/layout/SiteHeader.svelte'
-import type { Snippet } from 'svelte'
 
 let { children }: { children: Snippet } = $props()
 </script>

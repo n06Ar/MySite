@@ -1,7 +1,13 @@
 <script lang="ts">
 type WorkLink = { label: string; href: string }
 
-let { title, description, tags = [], links = [], status = 'wip' }: {
+let {
+	title,
+	description,
+	tags = [],
+	links = [],
+	status = 'wip',
+}: {
 	title: string
 	description: string
 	tags?: string[]
