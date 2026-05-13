@@ -1,16 +1,25 @@
 <script lang="ts">
 type Cta = { label: string; href: string; variant?: 'primary' | 'ghost' }
 
-export let headline = 'Webエンジニア / Frontend-leaning Fullstack'
-export let name = 'NaoNao'
-export let lead = 'こんにちは、n06arです 👋'
-export let descriptions = [
-	'ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです🙋',
-	'普段はフロントエンドを中心に、Webアプリケーションを作っています',
-	'試したことや悩んだこと、学んだことをこのサイトにまとめていきたいと思っています！',
-]
-export let tags: string[] = []
-export let ctas: Cta[] = []
+let {
+	headline = 'Webエンジニア / Frontend-leaning Fullstack',
+	name = 'NaoNao',
+	lead = 'こんにちは、n06arです 👋',
+	descriptions = [
+		'ここは n06ar のポートフォリオとブログのNaoNaoというWebサイトです🙋',
+		'普段はフロントエンドを中心に、Webアプリケーションを作っています',
+		'試したことや悩んだこと、学んだことをこのサイトにまとめていきたいと思っています！',
+	],
+	tags = [],
+	ctas = [],
+}: {
+	headline?: string
+	name?: string
+	lead?: string
+	descriptions?: string[]
+	tags?: string[]
+	ctas?: Cta[]
+} = $props()
 </script>
 
 <section class="section-shell section-space flex flex-col gap-6">

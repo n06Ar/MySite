@@ -9,8 +9,7 @@ const navLinks = [
 	{ label: 'About', href: '/#about' },
 ]
 
-let isOpen: boolean
-isOpen = false
+let isOpen = $state(false)
 
 const close = () => {
 	isOpen = false
@@ -49,7 +48,7 @@ onMount(() => {
 
 		<button
 			class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-lg border border-black/5 dark:border-white/10"
-			on:click={() => (isOpen = !isOpen)}
+			onclick={() => (isOpen = !isOpen)}
 			aria-label="ナビゲーション開閉"
 		>
 			{#if isOpen}
@@ -67,7 +66,7 @@ onMount(() => {
 					<a
 						class="py-2 hover:text-brand-600 dark:hover:text-brand-200 transition-colors"
 						href={nav.href}
-						on:click={close}
+						onclick={close}
 					>
 						{nav.label}
 					</a>

@@ -1,13 +1,16 @@
 <script lang="ts">
 import '../app.css'
+import type { Snippet } from 'svelte'
 import SiteFooter from '$lib/components/layout/SiteFooter.svelte'
 import SiteHeader from '$lib/components/layout/SiteHeader.svelte'
+
+let { children }: { children: Snippet } = $props()
 </script>
 
 <div class="min-h-screen flex flex-col bg-[color:var(--bg)] text-[var(--text-strong)] transition-colors">
 	<SiteHeader />
 	<main class="flex-1">
-		<slot />
+		{@render children()}
 	</main>
 	<SiteFooter />
 </div>

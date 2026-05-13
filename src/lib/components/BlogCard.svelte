@@ -1,7 +1,7 @@
 <script lang='ts'>
 import type { Blog } from '$lib/microCMS'
 
-export let blog: Blog
+let { blog }: { blog: Blog } = $props()
 
 const formatDate = (value: string) =>
 	new Date(value).toLocaleDateString('ja-JP', {
