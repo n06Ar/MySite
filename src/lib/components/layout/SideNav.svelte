@@ -28,12 +28,13 @@ const isSelected = (href: string) => {
 
 	<!-- ナビアイテム -->
 	<div class="nav-items">
-		<!-- 自己紹介 -->
+		<!-- Home -->
 		<a href="/" class="nav-item" class:selected={isSelected('/')} aria-current={isSelected('/') ? 'page' : undefined}>
 			<span class="outer-circle">
-				<span class="inner-circle">
-					<span class="sr-only">Home</span>
-				</span>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="home-icon" aria-hidden="true">
+					<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7A1 1 0 003 11h1v6a1 1 0 001 1h4v-4h2v4h4a1 1 0 001-1v-6h1a1 1 0 00.707-1.707l-7-7z"/>
+				</svg>
+				<span class="sr-only">Home</span>
 			</span>
 			<span class="nav-label">Home</span>
 		</a>
@@ -49,9 +50,8 @@ const isSelected = (href: string) => {
 				title={article.title}
 			>
 				<span class="outer-circle">
-					<span class="inner-circle">
-						<span class="sr-only">{article.title}</span>
-					</span>
+					<span class="inner-circle"></span>
+					<span class="sr-only">{article.title}</span>
 				</span>
 				<span class="nav-label">{article.title}</span>
 			</a>
@@ -98,13 +98,13 @@ const isSelected = (href: string) => {
 
 	.logo-link {
 		display: block;
-		margin-bottom: 24px;
+		margin-bottom: 20px;
 		flex-shrink: 0;
 	}
 
 	.logo-img {
-		width: 56px;
-		height: 56px;
+		width: 48px;
+		height: 48px;
 		border-radius: 9999px;
 		object-fit: cover;
 		display: block;
@@ -115,7 +115,7 @@ const isSelected = (href: string) => {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 4px;
+		gap: 2px;
 		overflow-y: auto;
 		overflow-x: hidden;
 	}
@@ -125,7 +125,7 @@ const isSelected = (href: string) => {
 		display: flex;
 		align-items: center;
 		gap: 10px;
-		padding: 4px 0;
+		padding: 3px 0;
 		color: var(--text-muted);
 		text-decoration: none;
 		min-width: 0;
@@ -139,8 +139,8 @@ const isSelected = (href: string) => {
 	/* outer circle */
 	.outer-circle {
 		flex-shrink: 0;
-		width: 38px;
-		height: 38px;
+		width: 30px;
+		height: 30px;
 		border-radius: 9999px;
 		border: 2px solid var(--divider);
 		display: flex;
@@ -150,30 +150,49 @@ const isSelected = (href: string) => {
 		position: relative;
 	}
 
+	/* ダーク: 未選択の外円を白系に */
+	:global(.dark) .outer-circle {
+		border-color: rgba(255, 255, 255, 0.22);
+	}
+
 	/* 繋ぎ線（XスタイルのリプライUI） */
 	.nav-item + .nav-item .outer-circle::before {
 		content: '';
 		position: absolute;
-		top: -10px;
+		top: -8px;
 		left: 50%;
 		transform: translateX(-50%);
 		width: 2px;
-		height: 10px;
+		height: 8px;
 		background-color: var(--divider);
 	}
 
+	:global(.dark) .nav-item + .nav-item .outer-circle::before {
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+
+	/* ライト: hover / 選択時 */
 	.nav-item:hover .outer-circle,
 	.nav-item.selected .outer-circle {
 		border-color: var(--brand);
 	}
 
+	/* ダーク: 選択時の外円をゴールドに */
+	:global(.dark) .nav-item.selected .outer-circle {
+		border-color: var(--gold);
+	}
+
 	/* inner circle */
 	.inner-circle {
-		width: 18px;
-		height: 18px;
+		width: 10px;
+		height: 10px;
 		border-radius: 9999px;
 		background-color: var(--divider);
 		transition: background-color 0.15s ease;
+	}
+
+	:global(.dark) .inner-circle {
+		background-color: rgba(255, 255, 255, 0.2);
 	}
 
 	.nav-item.selected .inner-circle {
@@ -182,6 +201,31 @@ const isSelected = (href: string) => {
 
 	:global(.dark) .nav-item.selected .inner-circle {
 		background-color: var(--gold);
+	}
+
+	/* home icon */
+	.home-icon {
+		width: 13px;
+		height: 13px;
+		fill: var(--divider);
+		transition: fill 0.15s ease;
+		flex-shrink: 0;
+	}
+
+	:global(.dark) .home-icon {
+		fill: rgba(255, 255, 255, 0.3);
+	}
+
+	.nav-item:hover .home-icon {
+		fill: var(--brand);
+	}
+
+	.nav-item.selected .home-icon {
+		fill: var(--brand);
+	}
+
+	:global(.dark) .nav-item.selected .home-icon {
+		fill: var(--gold);
 	}
 
 	/* label */
@@ -210,7 +254,7 @@ const isSelected = (href: string) => {
 	/* ===== SP（<768px）===== */
 	@media (max-width: 767px) {
 		.side-nav {
-			width: 77px;
+			width: 66px;
 			padding: 20px 10px;
 			align-items: center;
 		}
@@ -221,8 +265,8 @@ const isSelected = (href: string) => {
 		}
 
 		.logo-img {
-			width: 44px;
-			height: 44px;
+			width: 38px;
+			height: 38px;
 		}
 
 		.nav-label {
@@ -250,8 +294,8 @@ const isSelected = (href: string) => {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 32px;
-			height: 32px;
+			width: 28px;
+			height: 28px;
 			border-radius: 9999px;
 			border: 1px solid var(--divider);
 			background: transparent;
@@ -259,7 +303,7 @@ const isSelected = (href: string) => {
 			cursor: pointer;
 			margin-top: 12px;
 			flex-shrink: 0;
-			font-size: 12px;
+			font-size: 11px;
 			transition: border-color 0.15s ease;
 		}
 
