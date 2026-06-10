@@ -86,10 +86,25 @@ const formatDate = (value: string) =>
 			margin: 0.75em 0 0.5em;
 		}
 
+		:global(h2)::before {
+			content: '## ';
+			color: var(--brand);
+			font-weight: 700;
+			font-size: 0.65em;
+			vertical-align: middle;
+		}
+
 		:global(h3) {
 			font-size: 1.35em;
 			line-height: 1.4;
 			margin: 0.75em 0 0.5em;
+		}
+
+		:global(h3)::before {
+			content: '### ';
+			color: var(--nav-muted);
+			font-size: 0.6em;
+			vertical-align: middle;
 		}
 
 		:global(p) {

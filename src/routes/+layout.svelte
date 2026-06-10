@@ -1,16 +1,34 @@
 <script lang="ts">
 import '../app.css'
 import type { Snippet } from 'svelte'
-import SiteFooter from '$lib/components/layout/SiteFooter.svelte'
-import SiteHeader from '$lib/components/layout/SiteHeader.svelte'
+import SideNav from '$lib/components/layout/SideNav.svelte'
+import type { LayoutData } from './$types'
 
-let { children }: { children: Snippet } = $props()
+let { children, data }: { children: Snippet; data: LayoutData } = $props()
 </script>
 
-<div class="min-h-screen flex flex-col bg-[color:var(--bg)] text-[var(--text-strong)] transition-colors">
-	<SiteHeader />
-	<main class="flex-1">
+<div class="layout">
+	<SideNav articles={data.navArticles} />
+	<main class="main-content">
 		{@render children()}
 	</main>
-	<SiteFooter />
 </div>
+
+<style>
+	.layout {
+		display: flex;
+		min-height: 100dvh;
+		background-color: var(--bg);
+		color: var(--text-strong);
+		transition:
+			background-color 0.2s ease,
+			color 0.2s ease;
+	}
+
+	.main-content {
+		flex: 1;
+		min-width: 0;
+		background-color: var(--bg);
+		overflow-x: hidden;
+	}
+</style>
