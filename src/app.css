@@ -5,36 +5,36 @@
 @tailwind utilities;
 
 :root {
-	--brand:          #4169e1;
-	--gold:           #e1b941;
-	--nav-muted:      #9aafef;
-	--bg:             #f4f6fd;
-	--body-bg:        #ffffff;
-	--sidebar:        #ffffff;
+	--brand: #4169e1;
+	--gold: #e1b941;
+	--nav-muted: #9aafef;
+	--bg: #f4f6fd;
+	--body-bg: #ffffff;
+	--sidebar: #ffffff;
 	--sidebar-border: #e5e7eb;
-	--card:           #ffffff;
-	--text-strong:    #111827;
-	--text-muted:     #555555;
-	--text-label:     #888888;
-	--divider:        #dddddd;
-	--font-display:   'Nikukyu', 'Kiwi Maru', 'M PLUS Rounded 1c', sans-serif;
-	--font-body:      'M PLUS Rounded 1c', 'Noto Sans JP', system-ui, sans-serif;
+	--card: #ffffff;
+	--text-strong: #111827;
+	--text-muted: #555555;
+	--text-label: #888888;
+	--divider: #dddddd;
+	--font-display: "Nikukyu", "Kiwi Maru", "M PLUS Rounded 1c", sans-serif;
+	--font-body: "M PLUS Rounded 1c", "Noto Sans JP", system-ui, sans-serif;
 	color-scheme: light;
 }
 
 :root.dark {
-	--brand:          #4169e1;
-	--gold:           #e1b941;
-	--nav-muted:      #9aafef;
-	--bg:             #0d1117;
-	--body-bg:        #161b27;
-	--sidebar:        #1e2235;
+	--brand: #4169e1;
+	--gold: #e1b941;
+	--nav-muted: #9aafef;
+	--bg: #0d1117;
+	--body-bg: #161b27;
+	--sidebar: #1e2235;
 	--sidebar-border: transparent;
-	--card:           #161b27;
-	--text-strong:    #f1f5f9;
-	--text-muted:     #94a3b8;
-	--text-label:     #64748b;
-	--divider:        #1e293b;
+	--card: #161b27;
+	--text-strong: #f1f5f9;
+	--text-muted: #94a3b8;
+	--text-label: #64748b;
+	--divider: #1e293b;
 	color-scheme: dark;
 }
 
