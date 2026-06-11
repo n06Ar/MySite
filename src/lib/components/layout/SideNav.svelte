@@ -256,12 +256,23 @@ const isSelected = (href: string) => {
 		.side-nav {
 			width: 66px;
 			padding: 20px 10px;
+			padding-top: max(20px, env(safe-area-inset-top));
+			padding-bottom: max(16px, env(safe-area-inset-bottom));
 			align-items: center;
 		}
 
 		.side-nav.open {
 			width: 165px;
 			align-items: flex-start;
+		}
+
+		.side-nav:not(.open) .theme-area :global(button span) {
+			display: none;
+		}
+
+		.side-nav:not(.open) .theme-area :global(button) {
+			padding: 6px;
+			gap: 0;
 		}
 
 		.logo-img {
