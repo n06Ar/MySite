@@ -255,15 +255,20 @@ const isSelected = (href: string) => {
 	@media (max-width: 767px) {
 		.side-nav {
 			width: 66px;
-			padding: 20px 10px;
-			padding-top: max(20px, env(safe-area-inset-top));
-			padding-bottom: max(16px, env(safe-area-inset-bottom));
+			padding: 10px;
+			padding-top: max(24px, env(safe-area-inset-top));
+			padding-bottom: max(24px, env(safe-area-inset-bottom));
 			align-items: center;
 		}
 
 		.side-nav.open {
 			width: 165px;
 			align-items: flex-start;
+		}
+
+		.side-nav:not(.open) .theme-area {
+			display: flex;
+			justify-content: center;
 		}
 
 		.side-nav:not(.open) .theme-area :global(button span) {
