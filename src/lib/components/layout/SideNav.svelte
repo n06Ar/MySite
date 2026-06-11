@@ -86,7 +86,9 @@ const isSelected = (href: string) => {
 		align-items: flex-start;
 		padding: 24px 16px;
 		gap: 0;
-		background-color: var(--sidebar);
+		background-color: rgba(255, 255, 255, 0.75);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
 		border-right: 1px solid var(--sidebar-border);
 		overflow-y: auto;
 		overflow-x: hidden;
@@ -94,6 +96,10 @@ const isSelected = (href: string) => {
 			width 0.25s ease,
 			background-color 0.2s ease;
 		z-index: 10;
+	}
+
+	:global(.dark) .side-nav {
+		background-color: rgba(30, 34, 53, 0.8);
 	}
 
 	.logo-link {
