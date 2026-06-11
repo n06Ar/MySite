@@ -15,7 +15,10 @@ const isSelected = (href: string) => {
 }
 </script>
 
-<!-- PC: always open (260px), SP: closed (77px) / open (165px) -->
+<!-- PC: always open (260px), SP: closed (66px fixed) / open (165px overlay) -->
+{#if isOpen}
+	<div class="backdrop" role="presentation" onclick={() => (isOpen = false)}></div>
+{/if}
 <nav
 	class="side-nav"
 	class:open={isOpen}
@@ -257,9 +260,27 @@ const isSelected = (href: string) => {
 		display: none;
 	}
 
+	/* ===== バックドロップ（SP open 時のみ） ===== */
+	.backdrop {
+		display: none;
+	}
+
 	/* ===== SP（<768px）===== */
 	@media (max-width: 767px) {
+		.backdrop {
+			display: block;
+			position: fixed;
+			inset: 0;
+			background-color: rgba(0, 0, 0, 0.3);
+			z-index: 9;
+		}
+
 		.side-nav {
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			height: 100dvh;
 			width: 66px;
 			padding: 10px;
 			padding-top: max(24px, env(safe-area-inset-top));
