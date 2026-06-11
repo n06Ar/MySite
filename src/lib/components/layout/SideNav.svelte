@@ -15,7 +15,10 @@ const isSelected = (href: string) => {
 }
 </script>
 
-<!-- PC: always open (260px), SP: closed (77px) / open (165px) -->
+<!-- PC: always open (260px), SP: closed (66px fixed) / open (165px overlay) -->
+{#if isOpen}
+	<div class="backdrop" role="presentation" onclick={() => (isOpen = false)}></div>
+{/if}
 <nav
 	class="side-nav"
 	class:open={isOpen}
@@ -86,7 +89,9 @@ const isSelected = (href: string) => {
 		align-items: flex-start;
 		padding: 24px 16px;
 		gap: 0;
-		background-color: var(--sidebar);
+		background-color: rgba(255, 255, 255, 0.75);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
 		border-right: 1px solid var(--sidebar-border);
 		overflow-y: auto;
 		overflow-x: hidden;
@@ -94,6 +99,10 @@ const isSelected = (href: string) => {
 			width 0.25s ease,
 			background-color 0.2s ease;
 		z-index: 10;
+	}
+
+	:global(.dark) .side-nav {
+		background-color: rgba(30, 34, 53, 0.8);
 	}
 
 	.logo-link {
@@ -251,17 +260,51 @@ const isSelected = (href: string) => {
 		display: none;
 	}
 
+	/* ===== バックドロップ（SP open 時のみ） ===== */
+	.backdrop {
+		display: none;
+	}
+
 	/* ===== SP（<768px）===== */
 	@media (max-width: 767px) {
+		.backdrop {
+			display: block;
+			position: fixed;
+			inset: 0;
+			background-color: rgba(0, 0, 0, 0.3);
+			z-index: 9;
+		}
+
 		.side-nav {
+			position: fixed;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			height: 100dvh;
 			width: 66px;
-			padding: 20px 10px;
+			padding: 10px;
+			padding-top: max(24px, env(safe-area-inset-top));
+			padding-bottom: max(24px, env(safe-area-inset-bottom));
 			align-items: center;
 		}
 
 		.side-nav.open {
 			width: 165px;
 			align-items: flex-start;
+		}
+
+		.side-nav:not(.open) .theme-area {
+			display: flex;
+			justify-content: center;
+		}
+
+		.side-nav:not(.open) .theme-area :global(button span) {
+			display: none;
+		}
+
+		.side-nav:not(.open) .theme-area :global(button) {
+			padding: 6px;
+			gap: 0;
 		}
 
 		.logo-img {

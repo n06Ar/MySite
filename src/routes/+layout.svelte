@@ -31,4 +31,10 @@ let { children, data }: { children: Snippet; data: LayoutData } = $props()
 		background-color: var(--bg);
 		overflow-x: hidden;
 	}
+
+	@media (max-width: 767px) {
+		.main-content {
+			margin-left: 66px;
+		}
+	}
 </style>
