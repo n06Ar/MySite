@@ -1,7 +1,7 @@
 <script lang="ts">
 import '../app.css'
 import type { Snippet } from 'svelte'
-import SideNav from '$lib/components/layout/SideNav.svelte'
+import SideNav from '#lib/components/layout/SideNav.svelte'
 import type { LayoutData } from './$types'
 
 let { children, data }: { children: Snippet; data: LayoutData } = $props()

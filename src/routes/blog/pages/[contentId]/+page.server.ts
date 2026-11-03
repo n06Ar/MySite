@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit'
 import sanitizeHtml from 'sanitize-html'
-import type { Blog } from '$lib/microCMS'
-import { getBlogPageDetail } from '$lib/microCMS'
+import type { Blog } from '#lib/microCMS.js'
+import { getBlogPageDetail } from '#lib/microCMS.js'
 // @ts-ignore
 import type { PageServerLoad } from './$types'
 

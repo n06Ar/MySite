@@ -1,13 +1,13 @@
 <script lang="ts">
-import { page } from '$app/stores'
-import ThemeToggle from '$lib/components/ThemeToggle.svelte'
-import type { Blog } from '$lib/microCMS'
+import { page } from '$app/state'
+import ThemeToggle from '#lib/components/ThemeToggle.svelte'
+import type { Blog } from '#lib/microCMS.js'
 
 let { articles = [] }: { articles: Blog[] } = $props()
 
 let isOpen = $state(false)
 
-const currentPath = $derived($page.url.pathname)
+const currentPath = $derived(page.url.pathname)
 
 const isSelected = (href: string) => {
 	if (href === '/') return currentPath === '/'

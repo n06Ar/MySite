@@ -1,4 +1,4 @@
-import { getBlogPageList } from '$lib/microCMS'
+import { getBlogPageList } from '#lib/microCMS.js'
 
 export const load = async () => {
 	try {

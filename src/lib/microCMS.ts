@@ -6,7 +6,8 @@ import {
 	type MicroCMSImage,
 	type MicroCMSQueries,
 } from 'microcms-js-sdk'
-import { MICROCMS_API_KEY, MICROCMS_SERVICE_DOMAIN } from '$env/static/private'
+
+import { MICROCMS_API_KEY, MICROCMS_SERVICE_DOMAIN } from '$app/env/private'
 
 const client = createClient({
 	serviceDomain: MICROCMS_SERVICE_DOMAIN,

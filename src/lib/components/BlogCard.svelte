@@ -1,5 +1,5 @@
 <script lang='ts'>
-import type { Blog } from '$lib/microCMS'
+import type { Blog } from '#lib/microCMS.js'
 
 let { blog }: { blog: Blog } = $props()
 

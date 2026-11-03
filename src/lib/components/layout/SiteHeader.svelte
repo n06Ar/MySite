@@ -1,6 +1,6 @@
 <script lang="ts">
 import { onMount } from 'svelte'
-import ThemeToggle from '$lib/components/ThemeToggle.svelte'
+import ThemeToggle from '#lib/components/ThemeToggle.svelte'
 
 const navLinks = [
 	{ label: 'Home', href: '/' },
