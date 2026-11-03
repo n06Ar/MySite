@@ -1,7 +1,7 @@
 <script lang="ts">
-import { page } from '$app/state'
 import ThemeToggle from '#lib/components/ThemeToggle.svelte'
 import type { Blog } from '#lib/microCMS.js'
+import { page } from '$app/state'
 
 let { articles = [] }: { articles: Blog[] } = $props()
 

@@ -24,7 +24,7 @@ onMount(() => {
 </script>
 
 <button
-	class="inline-flex items-center gap-2 rounded-full border border-black/5 dark:border-white/10 px-3 py-1.5 text-sm font-semibold bg-white/70 dark:bg-white/5 backdrop-blur hover:border-brand-300 dark:hover:border-brand-400 transition-colors"
+	class="inline-flex items-center gap-2 rounded-full border border-black/5 dark:border-white/10 px-3 py-1.5 text-sm font-semibold bg-white/70 dark:bg-white/5 backdrop-blur-sm hover:border-brand-300 dark:hover:border-brand-400 transition-colors"
 	onclick={() => applyTheme(theme === "light" ? "dark" : "light")}
 	aria-label="テーマ切替"
 >

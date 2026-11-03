@@ -22,7 +22,7 @@ onMount(() => {
 })
 </script>
 
-<header class="sticky top-0 z-30 border-b border-black/5 dark:border-white/10 backdrop-blur bg-[color:var(--bg)]">
+<header class="sticky top-0 z-30 border-b border-black/5 dark:border-white/10 backdrop-blur-sm bg-(--bg)">
 	<div class="section-shell h-16 flex items-center justify-between gap-4">
 		<a href="/" class="flex items-center gap-2 font-black text-lg">
 			<img
@@ -60,7 +60,7 @@ onMount(() => {
 	</div>
 
 	{#if isOpen}
-		<div class="md:hidden border-t border-black/5 dark:border-white/10 bg-[color:var(--bg)]">
+		<div class="md:hidden border-t border-black/5 dark:border-white/10 bg-(--bg)">
 			<div class="section-shell py-3 flex flex-col gap-3 text-sm font-semibold">
 				{#each navLinks as nav}
 					<a

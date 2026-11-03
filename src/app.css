@@ -1,8 +1,52 @@
-@import "highlight.js/styles/tokyo-night-dark.min.css";
+@import "highlight.js/styles/tokyo-night-dark.min.css" layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-brand-50: #eef2fd;
+	--color-brand-100: #d4dfff;
+	--color-brand-200: #9aafef;
+	--color-brand-300: #7595e9;
+	--color-brand-400: #507be3;
+	--color-brand-500: #4169e1;
+	--color-brand-600: #3257d0;
+	--color-brand-700: #2846be;
+	--color-brand-800: #1e35a0;
+	--color-brand-900: #152680;
+	--color-brand-950: #0d1855;
+
+	--color-gold-50: #fdf9e8;
+	--color-gold-100: #faf0c3;
+	--color-gold-200: #f6e08a;
+	--color-gold-300: #ecd283;
+	--color-gold-400: #e9c85c;
+	--color-gold-500: #e1b941;
+	--color-gold-600: #c99b26;
+	--color-gold-700: #a87e1e;
+	--color-gold-800: #876116;
+	--color-gold-900: #664b10;
+	--color-gold-950: #3d2c07;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentcolor);
+	}
+}
 
 :root {
 	--brand: #4169e1;
